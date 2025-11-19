@@ -157,7 +157,6 @@ edit_uri: edit/main/docs/
 
 theme:
   name: material
-  custom_dir: overrides
   palette:
     - scheme: default
       primary: blue
@@ -231,6 +230,45 @@ EOF
 
 # Create initial docs structure for Mike
 print_info "Creating initial documentation structure..."
+
+# Create overrides directory and basic custom files
+mkdir -p overrides
+mkdir -p docs/stylesheets
+mkdir -p docs/javascripts
+
+# Create basic custom CSS
+cat > docs/stylesheets/extra.css << EOF
+/* Custom styles for newsletter */
+.newsletter-header {
+    background: linear-gradient(135deg, #1976d2, #42a5f5);
+    color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+}
+
+.newsletter-date {
+    font-style: italic;
+    color: #666;
+    margin-bottom: 1rem;
+}
+
+.highlight-box {
+    background: #f5f5f5;
+    border-left: 4px solid #1976d2;
+    padding: 1rem;
+    margin: 1rem 0;
+}
+EOF
+
+# Create basic custom JavaScript
+cat > docs/javascripts/extra.js << EOF
+// Custom JavaScript for newsletter
+document.addEventListener('DOMContentLoaded', function() {
+    console.log('Newsletter loaded with UV environment');
+});
+EOF
+
 cat > docs/index.md << EOF
 # Channel Newsletter
 

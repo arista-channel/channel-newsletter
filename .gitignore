@@ -1,4 +1,4 @@
-# UV and Python
+#UV and Python
 .venv/
 __pycache__/
 *.py[cod]

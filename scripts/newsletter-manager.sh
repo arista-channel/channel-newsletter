@@ -534,6 +534,13 @@ main() {
             check_prerequisites
             deploy_version "$2" "Newsletter deployment" true
             ;;
+        "deploy-local")
+            if [ -z "$2" ]; then
+                print_error "Usage: $0 deploy-local <version> [description]"
+                exit 1
+            fi
+            deploy_local "$2" "$3"
+            ;;
         "schedule")
             generate_schedule "${2:-$START_YEAR}"
             ;;
