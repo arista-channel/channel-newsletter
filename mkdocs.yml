@@ -1,0 +1,81 @@
+site_name: Channel Newsletter
+site_url: https://yourusername.github.io/channel-newsletter/
+site_description: Professional monthly newsletter with version control
+site_author: Your Organization
+
+repo_name: yourusername/channel-newsletter
+repo_url: https://github.com/yourusername/channel-newsletter
+edit_uri: edit/main/docs/
+
+theme:
+  name: material
+  custom_dir: overrides
+  palette:
+    - scheme: default
+      primary: blue
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - scheme: slate
+      primary: blue
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  
+  favicon: assets/images/favicon.png
+  logo: assets/images/logo.png
+  
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - navigation.tracking
+    - search.highlight
+    - search.suggest
+    - content.code.copy
+
+extra_css:
+  - stylesheets/extra.css
+
+extra_javascript:
+  - javascripts/extra.js
+
+markdown_extensions:
+  - abbr
+  - attr_list
+  - admonition
+  - def_list
+  - footnotes
+  - meta
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.tasklist:
+      custom_checkbox: true
+
+nav:
+  - Home: index.md
+  - Current Issue: current-issue.md
+  - Archive: archive.md
+  - About: about.md
+
+plugins:
+  - search
+  - minify:
+      minify_html: true
+
+copyright: Copyright &copy; 2024-2026 Your Organization. All rights reserved.
+
+extra:
+  version:
+    provider: mike
+    default: latest
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/yourusername
+    - icon: fontawesome/solid/envelope
+      link: mailto:newsletter@yourcompany.com
