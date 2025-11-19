@@ -21,49 +21,94 @@ Welcome to the Jan 2026 edition of our Channel Newsletter!
 !!! info "Feature Highlight"
     Add your key product updates and feature announcements here.
 
-**What's New:**
-- Feature 1: Description
-- Feature 2: Description
-- Feature 3: Description
+**What's New From our Workgroups:**
+
+- Campus: Products, Solutions, Software Updates
+- AI Centers & Cloud: Products, Solutions, Software Updates
+- Security: Products, Solutions, Software Updates
+- Services: Products, Solutions, Software Updates
+- Observability: Products, Solutions, Software Updates
+- Routing: Products, Solutions, Software Updates
+- Wireless: Products, Solutions, Software Updates
+- CloudVision Platform: Products, Solutions, Software Updates
+- Arista Automation: Products, Solutions, Software Updates  
 
 ---
 
 ## 📊 Industry Spotlight
 
-### Market Trends - Jan 2026
+### Arista in the news - Jan 2026
 
 Key developments in our industry this month:
 
+**🤝 Strategic Partnership Expansion**  
+[Arista and Palo Alto Networks Strengthen Partnership in the New Age of AI Security](https://blogs.arista.com/blog/arista-and-palo-alto-networks-strengthen-partnership-in-the-new-age-of-ai-security)
+
+*Arista Networks and Palo Alto Networks announce enhanced collaboration to deliver comprehensive AI-powered security solutions, combining Arista's high-performance networking with Palo Alto's advanced threat detection capabilities.*
+
+**🚀 AI Infrastructure Leadership**  
+[Arista Extends DC AI Leadership with New Platforms, Higher Speed](https://blogs.arista.com/blog/arista-extends-dc-ai-leadership-with-new-platforms-higher-speed)
+
+*Arista continues to lead the AI data center market with breakthrough networking platforms delivering unprecedented performance and scale for next-generation AI workloads.*
+
+**☀️ Scale-Up Ethernet Innovation**  
+[The Sun Rises on Scale-Up Ethernet](https://blogs.arista.com/blog/the-sun-rises-on-scale-up-ethernet)
+
+*Arista introduces revolutionary scale-up Ethernet architecture, transforming how AI clusters interconnect with breakthrough performance and simplified operations for next-generation computing.*
+
 | Trend | Impact | Opportunity |
 |-------|--------|-------------|
-| Trend 1 | High | Description |
-| Trend 2 | Medium | Description |
-| Trend 3 | Low | Description |
+| AI Security Integration | High | Enhanced partner solutions combining networking + security |
+| Strategic Partnerships | High | Expanded go-to-market opportunities |
+| AI Platform Innovation | High | New product opportunities for AI infrastructure |
+| Scale-Up Ethernet | High | Revolutionary architecture for AI clusters |
+| Market Consolidation | Medium | Stronger competitive positioning |
 
 ---
 
 ## 🌟 Partner Success Story
 
-### Featured Partner: [Partner Name]
+### Featured Partner: TechFlow Solutions
 
-> "Quote from partner about their success"
+> "Partnering with Arista has transformed our business. We've gone from a regional player to the go-to AI infrastructure specialist in Texas. The technical excellence of Arista products, combined with their partner support, has enabled us to win deals we never thought possible."
 > 
-> *- Partner Representative, Company Name*
+> *- Sarah Chen, CEO, TechFlow Solutions*
 
 **Key Achievements:**
-- Achievement 1
-- Achievement 2
-- Achievement 3
+
+- **340% revenue growth** year-over-year ($12.3M in Arista revenue)
+- **15 AI clusters deployed** with 5,000+ GPUs total
+- **99.97% network uptime** across all deployments
+- **Premier AI networking specialist** in Southwest region
+
+**Featured Project:** Austin Medical Research Institute - High-performance AI infrastructure for cancer research with 8x faster model training and 60% faster research cycles.
+
+[📖 Read Full Success Story →](content/Jan.2026/partner-success-story.md)
 
 ---
 
 ## 📅 Upcoming Events
 
-###  Events
+### Events
 
-**Event Name**  
-**Date**: TBD  
-**Location**: TBD  
+**Tech Forum - Arista AI Networking**  
+**Date**: Jan. 15, 2026
+**Location**: Zoom Online  
+**Registration**: [Link]
+
+**Live Online Tech Enablement - Arista VeloCloud Labs**  
+**Date**: Jan. 22, 2026  
+**Location**: Zoom Online  
+**Registration**: [Link]
+
+**Live Online Tech Enablement - Arista Test Drive**  
+**Date**: Jan. 29, 2026  
+**Location**: Zoom Online  
+**Registration**: [Link]
+
+**Campus Workshop - Onsite Hands-on Training**  
+**Date**: Feb. 5, 2026  
+**Location**: City near you
 **Registration**: [Link]
 
 ---
@@ -71,12 +116,11 @@ Key developments in our industry this month:
 ## 📞 Contact Information
 
 **Newsletter Team**  
-Email: newsletter@yourcompany.com  
-Phone: 1-800-555-0123
+Email: [channel-se@arista.com](mailto:channel-se@arista.com)  
 
 **Partner Support**  
-Email: partners@yourcompany.com  
-Portal: [partner.yourcompany.com](https://partner.yourcompany.com)
+Email: [partners-techhelp@arista.com](mailto:partners-techhelp@arista.com)
+Portal: [partner.arista.com](https://partner.arista.com)
 
 ---
 
@@ -84,5 +128,4 @@ Portal: [partner.yourcompany.com](https://partner.yourcompany.com)
 
 ## 📋 Newsletter Schedule
 
-**Next Issue**:  - Publishing 
-
+**Next Issue**:  - Publishing
