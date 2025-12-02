@@ -3,20 +3,12 @@ name: Deploy Newsletter with UV
 on:
   push:
     branches: [ main ]
-  pull_request:
-    branches: [ main ]
 
 permissions:
-  contents: read
-  pages: write
-  id-token: write
-
-concurrency:
-  group: "pages"
-  cancel-in-progress: false
+  contents: write
 
 jobs:
-  build:
+  deploy:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -51,17 +43,5 @@ jobs:
 
       - name: Deploy with Mike
         run: |
-          mike deploy --push --update-aliases ${GITHUB_REF#refs/heads/} latest
-          mike set-default latest
-
-  deploy:
-    if: github.ref == 'refs/heads/main'
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
-    needs: build
-    steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v2
+          mike deploy --push --update-aliases Jan.2026 latest
+          mike set-default --push latest

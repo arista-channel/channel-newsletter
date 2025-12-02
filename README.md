@@ -1,18 +1,19 @@
 # 📰 Channel Newsletter
 
-[![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-Live-brightgreen)](https://mbalagot12.github.io/channel-newsletter/)
+[![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-Live-brightgreen)](https://arista-channel.github.io/channel-newsletter/)
 [![MkDocs](https://img.shields.io/badge/MkDocs-Material-blue)](https://squidfunk.github.io/mkdocs-material/)
 [![Mike Versioning](https://img.shields.io/badge/Mike-Versioning-orange)](https://github.com/jimporter/mike)
 [![UV](https://img.shields.io/badge/UV-Environment-purple)](https://github.com/astral-sh/uv)
+[![Branch Protected](https://img.shields.io/badge/Branch-Protected-red)](docs/BRANCH_PROTECTION.md)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-**Professional monthly newsletter platform** with automated version control, featuring **Mike versioning system**, **UV environment management**, and **GitHub Pages deployment**. Each monthly edition is automatically archived and protected from future changes.
+**Professional quarterly newsletter platform** with automated version control, featuring **Mike versioning system**, **UV environment management**, and **GitHub Pages deployment**. Each quarterly edition is automatically archived and protected from future changes.
 
 ## 🌟 Key Features
 
-### 📅 **Monthly Newsletter Schedule**
-- **Release Schedule**: 2nd Tuesday of each month starting January 2026
-- **Version Format**: `Jan.2026`, `Feb.2026`, `Mar.2026`, etc.
+### 📅 **Quarterly Newsletter Schedule**
+- **Release Schedule**: 2nd week of March, June, September, and December (every 3 months)
+- **Version Format**: `Mar.2026`, `Jun.2026`, `Sep.2026`, `Dec.2026`, etc.
 - **Archive Protection**: Published versions are protected from overwrites
 - **Automated Dating**: Smart date calculation for consistent releases
 
@@ -41,7 +42,7 @@
 
 ```bash
 # Clone the repository
-git clone https://github.com/mbalagot12/channel-newsletter.git
+git clone https://github.com/arista-channel/channel-newsletter.git
 cd channel-newsletter
 
 # Set up UV environment (recommended)
@@ -61,7 +62,7 @@ uv pip install -r requirements.txt
 ./scripts/newsletter-manager.sh init
 
 # Create your first newsletter edition
-./scripts/newsletter-manager.sh create Jan.2026
+./scripts/newsletter-manager.sh create Mar.2026
 ```
 
 ### 3. Local Development
@@ -73,15 +74,58 @@ uv pip install -r requirements.txt
 # Visit: http://localhost:8000/
 ```
 
-### 4. Deploy to GitHub Pages
+### 4. Setup Branch Protection (Recommended)
+
+```bash
+# Install local git hooks to prevent accidental commits to main
+bash scripts/install-git-hooks.sh
+
+# Setup GitHub branch protection rules (requires admin access)
+bash scripts/setup-branch-protection.sh
+```
+
+📖 **See [Branch Protection Guide](docs/BRANCH_PROTECTION.md) for complete setup instructions**
+
+### 5. Deploy to GitHub Pages
 
 ```bash
 # Deploy current version
-./scripts/newsletter-manager.sh deploy Jan.2026
+./scripts/newsletter-manager.sh deploy Mar.2026
 
 # Set as default version
-./scripts/newsletter-manager.sh set-default Jan.2026
+./scripts/newsletter-manager.sh set-default Mar.2026
 ```
+
+## 🛡️ Branch Protection
+
+The `main` branch is protected to prevent unintentional commits and ensure quality. All changes must go through Pull Requests.
+
+### Quick Setup
+
+```bash
+# Install local protection (prevents accidental commits)
+bash scripts/install-git-hooks.sh
+
+# Enable GitHub protection (requires admin access)
+bash scripts/setup-branch-protection.sh
+```
+
+### Contribution Workflow
+
+```bash
+# 1. Create feature branch
+git checkout -b feature/my-feature
+
+# 2. Make changes and commit
+git add .
+git commit -m "✨ feat: Add new feature"
+
+# 3. Push and create PR
+git push origin feature/my-feature
+# Then create Pull Request on GitHub
+```
+
+📖 **Full documentation:** [Branch Protection Guide](docs/BRANCH_PROTECTION.md) | [Contributing Guidelines](CONTRIBUTING.md)
 
 ## 🛠️ Newsletter Manager Commands
 
@@ -160,18 +204,17 @@ channel-newsletter/
 
 ## 📅 Newsletter Schedule & Versioning
 
-### 2026 Release Schedule
+### 2026 Quarterly Release Schedule
 
-| Month | Version | Release Date | Status |
-|-------|---------|--------------|--------|
-| January | `Jan.2026` | January 14, 2026 | 🚀 Ready |
-| February | `Feb.2026` | February 11, 2026 | 📝 Planned |
-| March | `Mar.2026` | March 11, 2026 | 📝 Planned |
-| April | `Apr.2026` | April 8, 2026 | 📝 Planned |
-| May | `May.2026` | May 13, 2026 | 📝 Planned |
-| June | `Jun.2026` | June 10, 2026 | 📝 Planned |
+| Quarter | Month | Version | Release Week | Status |
+|---------|-------|---------|--------------|--------|
+| Q1 2026 | March | `Mar.2026` | 2nd week of March | 🚀 Ready |
+| Q2 2026 | June | `Jun.2026` | 2nd week of June | 📝 Planned |
+| Q3 2026 | September | `Sep.2026` | 2nd week of September | 📝 Planned |
+| Q4 2026 | December | `Dec.2026` | 2nd week of December | 📝 Planned |
 
-*All dates are calculated as the 2nd Tuesday of each month*
+**Publishing Frequency**: Quarterly (every 3 months)
+**Release Pattern**: 2nd week of March, June, September, and December
 
 ### Version Protection
 
