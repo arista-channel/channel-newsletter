@@ -1,0 +1,22 @@
+# CODEOWNERS - Defines who must review changes to specific files
+# This ensures critical files require approval from designated reviewers
+# Learn more: https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners
+
+# Default owners for everything in the repo
+# These users will be requested for review when someone opens a pull request
+* @mbalagot12
+
+# Workflow files require approval from maintainers
+/.github/workflows/ @mbalagot12
+
+# Configuration files require approval
+/mkdocs.yml @mbalagot12
+/requirements.txt @mbalagot12
+/pyproject.toml @mbalagot12
+
+# Newsletter management scripts require approval
+/scripts/ @mbalagot12
+
+# Content can be reviewed by content team
+/content/ @mbalagot12
+

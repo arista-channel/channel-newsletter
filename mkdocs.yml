@@ -1,43 +1,42 @@
 site_name: Channel Newsletter
-site_url: https://mbalagot12.github.io/channel-newsletter/
-site_description: Professional monthly newsletter with version control
+site_url: https://arista-channel.github.io/channel-newsletter/
+site_description: Professional quarterly newsletter with version control - Published every 3 months
 site_author: Miguel Balagot
 
-repo_name: mbalagot12/channel-newsletter
-repo_url: https://github.com/mbalagot12/channel-newsletter
-edit_uri: edit/main/content/
+# Repository link removed from header
+# repo_name: arista-channel/channel-newsletter
+# repo_url: https://github.com/arista-channel/channel-newsletter
+# edit_uri: edit/main/content/
 
 theme:
   name: material
+  logo: assets/logo.png
+  favicon: assets/logo.png
   palette:
     - scheme: default
       primary: blue
-      accent: indigo
+      accent: blue
       toggle:
         icon: material/brightness-7
         name: Switch to dark mode
     - scheme: slate
       primary: blue
-      accent: indigo
+      accent: blue
       toggle:
         icon: material/brightness-4
         name: Switch to light mode
-  
-  features:
-    - navigation.tabs
-    - navigation.sections
-    - navigation.expand
-    - navigation.top
-    - search.highlight
-    - content.code.copy
 
-docs_dir: content/Jan.2026
+docs_dir: content/Mar.2026
 
 nav:
   - Home: index.md
   - Current Issue: current-issue.md
   - Archive: archive.md
   - About: about.md
+
+markdown_extensions:
+  - attr_list
+  - md_in_html
 
 plugins:
   - search
@@ -50,7 +49,7 @@ extra:
     default: latest
   social:
     - icon: fontawesome/brands/github
-      link: https://github.com/mbalagot12/channel-newsletter
+      link: https://github.com/arista-channel/channel-newsletter
     - icon: fontawesome/solid/envelope
       link: mailto:mbalagot@arista.com
 
