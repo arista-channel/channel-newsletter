@@ -1,8 +1,8 @@
-# About Channel Newsletter
+# About Engineers' Exchange
 
 ## Our Mission
 
-The **Arista Channel Newsletter** serves as the premier communication platform connecting Arista Networks with our valued channel partners and their customers. We deliver timely, relevant, and actionable insights to help our partners succeed in today's rapidly evolving networking landscape.
+**Engineers' Exchange** serves as the premier technical communication platform connecting Arista Networks engineers with our valued channel partners and their technical teams. We deliver timely, relevant, and actionable technical insights - engineers sharing with engineers - to help our partners succeed in today's rapidly evolving networking landscape.
 
 ## Who We Serve
 
