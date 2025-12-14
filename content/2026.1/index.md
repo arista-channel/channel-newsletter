@@ -1,13 +1,13 @@
-# Engineers' Exchange - Q1 2026 (March)
+# Engineers' Exchange - Version 2026.1
 
 <div style="text-align: center;">
   <img src="assets/arista-logo.png" alt="Arista Logo" style="height:120px; margin-bottom:10px;">
   <p style="font-style: italic; color: #666; margin-top: 5px; margin-bottom: 20px;">Engineers sharing with engineers</p>
 </div>
 
-*Published: March 2026 | Q1 2026 Edition*
+*Published: March 2026 | Version 2026.1 | Q1 2026 Edition*
 
-Welcome to the inaugural Q1 2026 edition of **Engineers' Exchange**! We're excited to launch our new **quarterly publishing schedule**, bringing you comprehensive technical updates every three months - engineers sharing with engineers.
+Welcome to **Engineers' Exchange Version 2026.1**! We're excited to launch our new **quarterly publishing schedule**, bringing you comprehensive technical updates every three months - engineers sharing with engineers.
 
 ## 📰 In This Issue
 
@@ -25,7 +25,7 @@ This quarter, we're diving deep into three cutting-edge technologies that are tr
 
 ### 1️⃣ AI Data Center Networking: Scale-Up Ethernet Architecture
 
-**Author:** TBD
+**✍️ Author:** TBD
 
 **Overview**
 Explore the revolutionary Scale-Up Ethernet architecture designed specifically for AI/ML workloads, delivering breakthrough performance for GPU clusters and distributed training environments.
@@ -51,7 +51,7 @@ Explore the revolutionary Scale-Up Ethernet architecture designed specifically f
 
 ### 2️⃣ CloudVision Platform: AI-Powered Network Operations
 
-**Author:** TBD
+**✍️ Author:** TBD
 
 **Overview**
 Discover how CloudVision leverages artificial intelligence and machine learning to automate network operations, predict issues before they occur, and optimize performance across your entire infrastructure.
@@ -77,7 +77,7 @@ Discover how CloudVision leverages artificial intelligence and machine learning 
 
 ### 3️⃣ Industrial-Grade Ruggedized Switching: Cognitive Campus for the Edge
 
-**Author:** Bill Dyrek
+**✍️ Authors:** Bill Dyrek, System Engineers Manager / Miguel Balagot, Tech Lead
 
 **Overview**
 Arista's new ruggedized switching platforms bring the power, reliability, and operational simplicity of Arista EOS to demanding industrial and outdoor environments. The 710HXP Series extends Cognitive Campus capabilities to harsh environments across manufacturing, transportation, utilities, and outdoor deployments.

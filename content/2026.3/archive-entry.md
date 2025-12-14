@@ -1,8 +1,8 @@
-# Sep 2026 Newsletter
+# Version 2026.3 Newsletter
 
-*Published: *
+*Published: September 2026 | Q3 2026*
 
-[📖 Read Full Issue](../Sep.2026/)
+[📖 Read Full Issue](../2026.3/)
 
 ## Highlights
 

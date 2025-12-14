@@ -1,8 +1,8 @@
-# Jun 2026 Newsletter
+# Version 2026.4 Newsletter
 
-*Published: *
+*Published: December 2026 | Q4 2026*
 
-[📖 Read Full Issue](../Jun.2026/)
+[📖 Read Full Issue](../2026.4/)
 
 ## Highlights
 

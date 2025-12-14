@@ -1,4 +1,4 @@
-# Engineers' Exchange - Q1 2026 (March)
+# Engineers' Exchange - Version 2026.1
 
 <div style="text-align: center;">
   <img src="../assets/arista-logo.png" alt="Arista Logo" style="height:100px; margin-bottom:10px;">
