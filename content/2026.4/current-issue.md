@@ -1,11 +1,11 @@
-# Current Newsletter Issue - Q1 2026 (March)
+# Engineers' Exchange - Version 2026.4
 
 <div style="text-align: center;">
   <img src="../assets/arista-logo.png" alt="Arista Logo" style="height:100px; margin-bottom:10px;">
-  <p style="font-style: italic; color: #666; margin-top: 5px; margin-bottom: 20px;">Arista Channel Quarterly Technical Newsletter</p>
+  <p style="font-style: italic; color: #666; margin-top: 5px; margin-bottom: 20px;">Engineers sharing with engineers</p>
 </div>
 
-*Last Updated: March 2026*
+*Last Updated: December 2026*
 
 ## 📰 Current Issue Overview
 
