@@ -330,9 +330,13 @@ Resources
 ## 📞 Contact Information
 
 **Newsletter Team**
+
 Email: [cse-newsletter@arista.com](mailto:cse-newsletter@arista.com)
+
 **Partner Support**
+
 Email: [partners-techhelp@arista.com](mailto:partners-techhelp@arista.com)
+
 Portal: [partners.arista.com](https://partners.arista.com)
 
 ---
