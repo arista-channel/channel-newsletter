@@ -23,7 +23,7 @@ This quarter, we're diving deep into three cutting-edge technologies that are tr
 
 ---
 
-### 1️⃣ AI Data Center Networking: Scale-Up Ethernet Architecture
+### 1. AI Data Center Networking: Scale-Up Ethernet Architecture
 
 ✍️ Authors: Brandon Mainock, Channel Systems Engineer / Laban Hickling, Sr. Systems Engineer
 
@@ -179,7 +179,7 @@ Cluster Load Balancing (CLB) Platform Support
 
 ---
 
-### 2️⃣ Industrial-Grade Ruggedized Switching: Cognitive Campus for the Edge
+### 2. Industrial-Grade Ruggedized Switching: Cognitive Campus for the Edge
 
 ✍️ Authors: Bill Dyrek, Sr. System Engineering Manager
 
