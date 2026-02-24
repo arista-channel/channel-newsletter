@@ -2,6 +2,11 @@
 
 **✍️ Authors:** [Author Name, Title] / [Co-Author Name, Title]
 
+<!-- Optional: Add image to highlight content
+![Image Description](assets/image-name.png)
+*Image caption (optional)*
+-->
+
 **Overview**
 [2-3 sentence summary. What is it? Why does it matter? Who is it for?]
 

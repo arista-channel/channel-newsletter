@@ -27,6 +27,11 @@ This quarter, we're diving deep into three cutting-edge technologies that are tr
 
 ✍️ Authors: Brandon Mainock, Channel Systems Engineer / Laban Hickling, Sr. Systems Engineer
 
+<!-- Optional: Add image to highlight content
+![Image Description](assets/image-name.png)
+*Image caption (optional)*
+-->
+
 Overview
 In AI workloads, squeezing every ounce of performance out of your cluster can have a major impact on job completion time given the scale. Arista's AI networking solutions address this challenge through Cluster Load Balancing (CLB) and the Distributed Etherlink Switch architecture, delivering unprecedented performance for AI and HPC workloads while simplifying network operations.
 
@@ -243,6 +248,11 @@ Resources:
 ### 2️⃣ Industrial-Grade Ruggedized Switching: Cognitive Campus for the Edge
 
 ✍️ Authors: Bill Dyrek, Sr. System Engineering Manager
+
+<!-- Optional: Add image to highlight content
+![Image Description](assets/image-name.png)
+*Image caption (optional)*
+-->
 
 Overview
 
