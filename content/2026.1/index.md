@@ -57,7 +57,7 @@ Cluster Load Balancing (CLB) Platform Support
 - Load Balancing Modes: Flow-based and port-based approaches
 - Use Cases: AI/ML training clusters, distributed computing, high-performance storage networks
 
-**Technical Benefits:**
+**1.Technical Benefits:**
 
 - **Packet Spraying Technology**: Cell-based spraying divides packets into fixed-size cells and distributes them across all available links, providing superior load balancing and collision handling compared to traditional flow-based hashing
 - **Unified Logical Device**: The 7700R4 platform treats physically distributed spines and leafs as a single logical switch, offering the simplicity and scalability of a modular chassis while maintaining the flexibility of a distributed architecture
@@ -76,7 +76,7 @@ Cluster Load Balancing (CLB) Platform Support
 - **Simplified Troubleshooting**: Single-hop design and unified device model reduce complexity in diagnosing performance issues
 - **Future-Proof**: Support for 800G interfaces and modular architecture enables seamless capacity expansion
 
-**Partner Opportunities:**
+**2.Partner Opportunities:**
 
 - AI Infrastructure Projects: Design and deploy large-scale AI training clusters for enterprises and research institutions
 - HPC Modernization: Upgrade legacy InfiniBand or older Ethernet HPC networks to modern RoCE-based solutions
