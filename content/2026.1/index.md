@@ -23,10 +23,9 @@ This quarter, we're diving deep into three cutting-edge technologies that are tr
 
 ---
 
-
 ### 1️⃣ AI Data Center Networking: Scale-Up Ethernet Architecture
 
-✍️ Authors: Brandon Mainock, Solutions Architect / Laban Hickling, Systems Engineer
+✍️ Authors: Brandon Mainock, Channel Systems Engineer / Laban Hickling, Sr. Systems Engineer
 
 Overview
 In AI workloads, squeezing every ounce of performance out of your cluster can have a major impact on job completion time given the scale. Arista's AI networking solutions address this challenge through Cluster Load Balancing (CLB) and the Distributed Etherlink Switch architecture, delivering unprecedented performance for AI and HPC workloads while simplifying network operations.
@@ -238,138 +237,52 @@ Resources:
 **Resources:**
 - Arista AI Networking White Paper: <a href="https://www.arista.com/assets/data/pdf/Whitepapers/AI-Network-WP.pdf" target="_blank">AI Network Architecture Guide</a>
 - 7700R4 Series Product Page: <a href="https://www.arista.com/en/products/7700r4-series" target="_blank">7700R4 Distributed Etherlink Switch</a>
-- Cluster Load Balancing Configuration Guide: [Coming Soon]
-- AI Networking Best Practices: [Coming Soon]
-
----
-- Integration with third-party monitoring and orchestration tools
-
-**Resources:**
-- API documentation: [Coming Soon]
-- Automation cookbook: [Coming Soon]
-- Video tutorials: [Coming Soon]
 
 ---
 
-### 3️⃣ Industrial-Grade Ruggedized Switching: Cognitive Campus for the Edge
+### 2️⃣ Industrial-Grade Ruggedized Switching: Cognitive Campus for the Edge
 
-**✍️ Authors:** Bill Dyrek, System Engineers Manager / Miguel Balagot, Tech Lead
+✍️ Authors: Bill Dyrek, Sr. System Engineering Manager
 
-**Overview**
-Arista's new ruggedized switching platforms bring the power, reliability, and operational simplicity of Arista EOS to demanding industrial and outdoor environments. The 710HXP Series extends Cognitive Campus capabilities to harsh environments across manufacturing, transportation, utilities, and outdoor deployments.
+Overview
 
-**Key Technical Highlights:**
-- **Extreme Environment Resilience**: IP50 Din Rail and IP30 1RU form factors engineered for harsh conditions
-- **High-Power PoE**: 90W per port supporting next-generation Wi-Fi 7 access points and high-powered outdoor cameras
-- **Multi-Gig Connectivity**: Flexible 1G/2.5G/5G/10G interfaces for modern IoT and industrial devices
-- **Unified EOS Platform**: Single consistent operating system across campus, data center, and industrial edge
+Arista's expansion of the enterprise network into industrial and operational technology (OT) environments represents a significant growth opportunity for our Partners. To address this demand, Arista has introduced the CCS-710HXP series, a line of ruggedized, fanless Power over Ethernet (PoE) switches designed to extend the Cognitive Campus into harsh settings. Engineered to operate where standard wiring closet switches cannot, the CCS-710HXP series combines the reliability of industrial hardware with the advanced automation and security of Arista's Extensible Operating System (EOS). This platform allows partners to offer a unified "edge-to-core" architecture, bringing data center-grade manageability to factory floors, substations, and outdoor cabinets.
 
-**Platform Specifications:**
+Key Technical Highlights
 
-**710HXP-28TXH (Din Rail Switch - IP50 Rating)**
-- **Form Factor**: Compact Din Rail mount for industrial control cabinets
-- **Port Configuration**: 20 multi-gig ports (1G/2.5G/5G/10G) + 8 uplink ports
-- **PoE Capability**: 90W high-power PoE++ for demanding devices
-- **Environmental**: IP50 rating, extreme temperature range (-40°C to +75°C)
-- **Resilience**: Withstands vibrations, shocks, and electromagnetic interference
-- **Use Cases**: Factory automation, industrial IoT, transportation hubs, outdoor kiosks
+- Physical Resilience: Built to withstand extreme operating temperatures from -40°C to 75°C (-40°F to 167°F) and IP30-rated, complying with rigorous industrial standards including IEC 61850-3 for substations and IEEE 1613
+- Full Arista EOS: Runs the fully featured Arista EOS (not a "lite" version), providing Zero Touch Provisioning (ZTP) for rapid deployment and stateful fault repair for high availability
+- CloudVision Management: Single management plane across campus, data center, and edge with real-time telemetry and predictive analytics
+- Advanced Segmentation: Supports EVPN VXLAN and 802.1Q VLANs for Zero Trust architectures
+- Cognitive Continuous PoE: Ensures downstream devices remain powered even during switch reboots, eliminating the need for external backup power sources
 
-**710HXP-20TNH (1RU Ruggedized Switch - IP30 Rating)**
-- **Form Factor**: Standard 1RU rack-mount for network closets and outdoor enclosures
-- **Port Configuration**: 24 multi-gig ports with high-density connectivity
-- **PoE Capability**: 90W high-power PoE++ across all ports
-- **Environmental**: IP30 rating, extended temperature range (-20°C to +65°C)
-- **Resilience**: Fanless or hardened cooling for dusty/humid environments
-- **Use Cases**: Outdoor campus networks, parking structures, stadiums, warehouses
+Platform Specifications
 
-**Technical Benefits:**
+710HXP-28TXH-4S (1RU rack mount)
+- 24x 10M-1GbE RJ45 @ 60W
+- 4x 100M-10GbE RJ45 @ 90W
+- 4x 1/10G SFP+ Uplinks
 
-**1. Unified Operations with EOS**
-- **Single OS**: Same Arista EOS across all network domains eliminates operational silos
-- **CloudVision Integration**: Centralized management, telemetry, and automation for industrial edge
-- **Zero Touch Provisioning**: Automated deployment and configuration for remote sites
-- **Consistent CLI/API**: Reduce training costs and operational complexity
+710HXP-20TNH-4S (DIN rail mount)
+- 16x 10M-1GbE RJ45 @ 30W
+- 4x 100M-5GbE RJ45 @ 90W
+- 4x 1/10G SFP+ Uplinks
 
-**2. Industrial-Grade Reliability**
-- **Extreme Temperature Operation**: Continuous operation in environments from -40°C to +75°C
-- **Vibration & Shock Resistance**: Meets industrial standards for mechanical stress
-- **EMI/EMC Compliance**: Electromagnetic interference protection for industrial environments
-- **Redundant Power**: Dual power inputs with automatic failover
+Partner Opportunities
 
-**3. Next-Generation Device Support**
-- **90W PoE++**: Powers Wi-Fi 7 access points, PTZ cameras, digital signage, and industrial sensors
-- **Multi-Gig Flexibility**: Auto-negotiation from 1G to 10G for future-proof connectivity
-- **High Bandwidth**: Supports bandwidth-intensive applications like 4K/8K video surveillance
+- IT/OT Convergence Projects: Help customers merge their IT and OT infrastructures with a unified network platform
+- Industrial Modernization: Replace legacy industrial switches with Arista's Cognitive Campus architecture
+- Smart Manufacturing: Deploy secure, automated networks for Industry 4.0 initiatives
+- Critical Infrastructure: Provide ruggedized networking for utilities, substations, and transportation systems
+- Outdoor Deployments: Extend enterprise networks to harsh outdoor environments with IP-rated switches
 
-**4. Security & Segmentation**
-- **Network Segmentation**: Isolate OT/IT networks and IoT devices with granular policies
-- **802.1X Authentication**: Identity-based access control for industrial devices
-- **Threat Detection**: Integration with Arista NDR for industrial network security
-- **Secure Management**: CloudVision-based zero-touch provisioning and encrypted management
+Resources
 
-**Deployment Use Cases:**
-
-**Manufacturing & Industrial Automation**
-- **Challenge**: Factory floors require switches that withstand extreme temperatures, vibrations, and electromagnetic interference
-- **Solution**: 710HXP-28TXH Din Rail switches in control cabinets connecting PLCs, robots, and sensors
-- **Benefits**: Unified EOS platform bridges OT/IT networks, CloudVision provides real-time visibility into industrial IoT
-
-**Transportation & Smart Cities**
-- **Challenge**: Outdoor deployments for traffic management, surveillance, and public Wi-Fi in harsh weather
-- **Solution**: 710HXP-20TNH in outdoor enclosures powering Wi-Fi 7 APs, traffic cameras, and digital signage
-- **Benefits**: 90W PoE supports high-powered devices, IP30 rating ensures reliability in rain/snow/heat
-
-**Outdoor Campus & Stadiums**
-- **Challenge**: Large outdoor areas require high-density Wi-Fi and surveillance with extreme temperature tolerance
-- **Solution**: Ruggedized switches in parking structures, outdoor plazas, and stadium concourses
-- **Benefits**: Multi-gig uplinks handle 4K video streams, unified CloudVision management across indoor/outdoor
-
-**Utilities & Energy**
-- **Challenge**: Substations and remote sites need reliable networking in extreme environments with minimal maintenance
-- **Solution**: Din Rail switches in electrical cabinets for SCADA systems and smart grid devices
-- **Benefits**: Extended temperature range, fanless operation, zero-touch provisioning for remote deployment
-
-**Warehousing & Logistics**
-- **Challenge**: Distribution centers require high-density connectivity for automation, robotics, and real-time tracking
-- **Solution**: 1RU ruggedized switches in warehouse network closets connecting AGVs, scanners, and cameras
-- **Benefits**: High PoE budget for dense device deployments, EOS automation for dynamic inventory systems
-
-**Retail & Hospitality**
-- **Challenge**: Outdoor retail spaces and drive-throughs need reliable connectivity for POS, digital menus, and cameras
-- **Solution**: Compact ruggedized switches in outdoor kiosks and remote buildings
-- **Benefits**: Fanless operation in dusty environments, 90W PoE for outdoor displays and cameras
-
-**Partner Opportunities:**
-- **Industrial IoT Projects**: Expand into manufacturing, energy, and transportation verticals
-- **Campus Modernization**: Extend Cognitive Campus to outdoor areas, parking, and remote buildings
-- **Smart City Initiatives**: Municipal Wi-Fi, traffic management, and public safety networks
-- **Retrofit Projects**: Replace legacy industrial switches with unified Arista EOS platform
-
-**Resources:**
-- Product data sheet: <a href="https://www.arista.com/en/products/710hxp-series" target="_blank">710HXP Series Product Page</a> (Datasheet coming Q1 2026)
-- Industrial deployment guide: [Coming Soon]
-- OT/IT convergence white paper: [Coming Soon]
-- CloudVision for industrial edge: [Coming Soon]
+- Product data sheet: <a href="https://www.arista.com/en/products/710hxp-series" target="_blank">710HXP Series Product Page</a>
 
 ---
 
-## 📊 Industry Spotlight
-
-### Arista Technology News - Latest Innovations
-
-**🏢 Arista VESPA: Mega-Scale Campus Mobility (December 2025)**
-<a href="https://blogs.arista.com/blog/cognitive-campus-blueprint" target="_blank">The Cognitive Campus Blueprint for Enterprise Networking</a>
-
-*Arista unveiled VESPA (Virtual Ethernet Segment with Proxy ARP) for massive-scale campus wireless deployments. VESPA applies high-scale data center principles like EVPN to campus network design, fundamentally breaking controller dependency and enabling a single, massive roaming domain supporting over 500,000 clients with high resiliency and fast failover.*
-
-**Key Capabilities:**
-- **Massive Scale**: Single mobility domain supporting 500,000+ wireless clients
-- **Controller-Free Architecture**: Eliminates legacy controller bottlenecks and single points of failure
-- **EVPN-Based Design**: Leverages proven data center technologies for campus mobility
-- **High Resiliency**: Fast failover and distributed control plane for always-on networks
-- **Cognitive Campus Vision**: Part of Arista's unified approach with AVA AI Ops and ruggedized platforms
-
-**🚀 Next-Gen 800G R4 Portfolio (October 2025)**
+**🚀 Next-Gen 800G R4 Portfolio**
 <a href="https://www.arista.com/en/company/news/press-release/22541-pr-10292025" target="_blank">Arista Networks Unveils Next Generation Data and AI Centers</a>
 
 *Arista announced the R4 Series family of 800G platforms for AI, data center, and routed backbone deployment. The new portfolio includes the 7800R4 modular system (up to 576 ports of 800GbE), 7280R4 fixed spine (32-port 800GbE), and introduces revolutionary 3.2 Tbps HyperPorts for ultra-capacity distributed AI workloads. All platforms feature wirespeed TunnelSec encryption (MACsec, IPsec, VXLANsec) for integrated security.*
@@ -397,25 +310,20 @@ Arista's new ruggedized switching platforms bring the power, reliability, and op
 
 ### Events
 
-**Tech Forum - Arista AI Networking**
-**Date**: Mar. 15, 2026
+**Tech Forum - Campus Products and SolutionsUpdate**
+**Date**: Mar. 19, 2026
 **Location**: Zoom Online
-**Registration**: [Link]
+**Registration**: [https://partners.arista.com/English/partners/home.aspx]
 
-**Live Online Tech Enablement - Arista VeloCloud Labs**
-**Date**: Mar. 22, 2026
+**Live Online Tech Enablement - Streamline Your Wireless Network)**
+**Date**: Ongoing webinar
 **Location**: Zoom Online
-**Registration**: [Link]
+**Registration**: [https://solutions.arista.com/en/wi-fiweb2-0?utm_source=website&amp;utm_medium=wifi_overviewLink]
 
-**Live Online Tech Enablement - Arista Test Drive**
-**Date**: Mar. 29, 2026
-**Location**: Zoom Online
-**Registration**: [Link]
-
-**Campus Workshop - Onsite Hands-on Training**
-**Date**: Apr. 5, 2026
-**Location**: City near you
-**Registration**: [Link]
+**Arista Partner Events - Global Event Calendar**
+**Date**: Ongoing webinar and onsite events
+**Location**: Zoom Online and city near you
+**Registration**: [https://events.arista.com/events-calendar]
 
 ---
 
