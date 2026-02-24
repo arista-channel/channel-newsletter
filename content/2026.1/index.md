@@ -125,8 +125,6 @@ Partner Opportunities:
 Resources:
 - Arista AI Networking White Paper: <a href="https://www.arista.com/assets/data/pdf/Whitepapers/AI-Network-WP.pdf" target="_blank">AI Network Architecture Guide</a>
 - 7700R4 Series Product Page: <a href="https://www.arista.com/en/products/7700r4-series" target="_blank">7700R4 Distributed Etherlink Switch</a>
-- Cluster Load Balancing Configuration Guide: [Coming Soon]
-- AI Networking Best Practices: [Coming Soon]
 
 ---
 
