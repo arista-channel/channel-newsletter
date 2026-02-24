@@ -286,7 +286,7 @@ Partner Opportunities
 - Critical Infrastructure: Provide ruggedized networking for utilities, substations, and transportation systems
 - Outdoor Deployments: Extend enterprise networks to harsh outdoor environments with IP-rated switches
 
-Resources
+**Resources:**
 
 - Product data sheet: <a href="https://www.arista.com/en/products/710hxp-series" target="_blank">710HXP Series Product Page</a>
 
