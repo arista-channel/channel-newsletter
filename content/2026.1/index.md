@@ -57,72 +57,35 @@ Cluster Load Balancing (CLB) Platform Support
 - Load Balancing Modes: Flow-based and port-based approaches
 - Use Cases: AI/ML training clusters, distributed computing, high-performance storage networks
 
-Technical Benefits:
+**Technical Benefits:**
 
-1. Distributed Etherlink Platform Architecture
-- Packet Spraying Technology: Cell-based spraying divides packets into fixed-size cells and distributes them across all available links, providing superior load balancing and collision handling compared to traditional flow-based hashing
-- Unified Logical Device: The 7700R4 platform treats physically distributed spines and leafs as a single logical switch, offering the simplicity and scalability of a modular chassis while maintaining the flexibility of a distributed architecture
-- Virtual Output Queuing (VOQ): Credit-based global queuing system checks destination port availability before sending flows, achieving lossless properties by preventing conflicting flows on the same destination port
-- Simplified Operations: Single-hop design eliminates the complexity of multi-tier load balancing decisions, reducing latency and improving predictability
+- **Packet Spraying Technology**: Cell-based spraying divides packets into fixed-size cells and distributes them across all available links, providing superior load balancing and collision handling compared to traditional flow-based hashing
+- **Unified Logical Device**: The 7700R4 platform treats physically distributed spines and leafs as a single logical switch, offering the simplicity and scalability of a modular chassis while maintaining the flexibility of a distributed architecture
+- **Virtual Output Queuing (VOQ)**: Credit-based global queuing system checks destination port availability before sending flows, achieving lossless properties by preventing conflicting flows on the same destination port
+- **Simplified Operations**: Single-hop design eliminates the complexity of multi-tier load balancing decisions, reducing latency and improving predictability
+- **Elephant Flow Optimization**: Addresses the fundamental problem where long-lived, high-bandwidth flows (elephant flows) cause ECMP hash collisions, leading to link congestion, packet drops, and increased GPU idle time that impacts job completion time (JCT)
+- **Flow-Based CLB**: Inspects packet headers (specifically RDMA queue pairs) via a snooping engine to differentiate flows, then assigns each flow to the least-loaded interface using a global inventory of available uplinks and downlinks
+- **Port-Based CLB**: Uses Load Balance Number (LBN) based hashing to map each server downlink to a specific switch uplink, preventing collisions by pinning flows to dedicated ports
+- **Link Restoration (Debouncing)**: Automatically detects link failures and waits for links to stabilize before rebalancing traffic, ensuring capacity is restored without causing disruption
+- **Bandwidth Utilization**: CLB achieves near-100% bandwidth utilization by intelligently distributing flows across all available paths, compared to 60-70% with traditional ECMP
+- **Reduced Job Completion Time**: Optimized load balancing and lossless forwarding minimize GPU idle time, directly improving AI training and inference performance
+- **Scalability**: Distributed Etherlink architecture scales to thousands of GPUs in a single-hop design without increasing complexity
+- **Predictable Latency**: Single-hop topology and VOQ ensure consistent, low-latency forwarding for time-sensitive AI workloads
+- **Unified Management**: Entire distributed switch fabric managed as a single logical device through CloudVision
+- **Automated Failover**: Link restoration capabilities automatically recover from failures without manual intervention
+- **Simplified Troubleshooting**: Single-hop design and unified device model reduce complexity in diagnosing performance issues
+- **Future-Proof**: Support for 800G interfaces and modular architecture enables seamless capacity expansion
 
-2. Cluster Load Balancing Intelligence
-- Elephant Flow Optimization: Addresses the fundamental problem where long-lived, high-bandwidth flows (elephant flows) cause ECMP hash collisions, leading to link congestion, packet drops, and increased GPU idle time that impacts job completion time (JCT)
-- Flow-Based CLB: Inspects packet headers (specifically RDMA queue pairs) via a snooping engine to differentiate flows, then assigns each flow to the least-loaded interface using a global inventory of available uplinks and downlinks
-- Port-Based CLB: Uses Load Balance Number (LBN) based hashing to map each server downlink to a specific switch uplink, preventing collisions by pinning flows to dedicated ports
-- Link Restoration (Debouncing): Automatically detects link failures and waits for links to stabilize before rebalancing traffic, ensuring capacity is restored without causing disruption
+**Partner Opportunities:**
 
-3. Performance and Efficiency
-- Bandwidth Utilization: CLB achieves near-100% bandwidth utilization by intelligently distributing flows across all available paths, compared to 60-70% with traditional ECMP
-- Reduced Job Completion Time: Optimized load balancing and lossless forwarding minimize GPU idle time, directly improving AI training and inference performance
-- Scalability: Distributed Etherlink architecture scales to thousands of GPUs in a single-hop design without increasing complexity
-- Predictable Latency: Single-hop topology and VOQ ensure consistent, low-latency forwarding for time-sensitive AI workloads
-
-4. Operational Simplicity
-- Unified Management: Entire distributed switch fabric managed as a single logical device through CloudVision
-- Automated Failover: Link restoration capabilities automatically recover from failures without manual intervention
-- Simplified Troubleshooting: Single-hop design and unified device model reduce complexity in diagnosing performance issues
-- Future-Proof: Support for 800G interfaces and modular architecture enables seamless capacity expansion
-
-Deployment Use Cases:
-
-Large-Scale AI Training Clusters
-- Challenge: Training large language models (LLMs) and foundation models requires thousands of GPUs with high-bandwidth, low-latency interconnects. Traditional leaf-spine architectures suffer from ECMP hash collisions and multi-hop latency
-- Solution: 7700R4 Distributed Etherlink Switch with CLB provides single-hop connectivity for up to 4,096 GPUs, using cell-based packet spraying and flow-aware load balancing
-- Benefits: 30-40% reduction in job completion time, near-100% bandwidth utilization, simplified operations with single logical device management
-
-GPU-Accelerated HPC Environments
-- Challenge: High-performance computing workloads require lossless Ethernet with RDMA support, but traditional networks experience packet loss during congestion
-- Solution: CLB with Virtual Output Queuing ensures lossless forwarding by preventing destination port collisions, while flow-based load balancing optimizes RDMA queue pair distribution
-- Benefits: Zero packet loss for RDMA traffic, improved application performance, reduced need for complex PFC (Priority Flow Control) tuning
-
-Distributed AI Inference at Scale
-- Challenge: Real-time inference workloads require predictable, low-latency networking across distributed GPU pools
-- Solution: Single-hop 7700R4 architecture with port-based CLB provides deterministic latency and prevents flow collisions
-- Benefits: Consistent sub-microsecond latency, predictable performance for SLA-sensitive applications, simplified capacity planning
-
-Multi-Tenant AI Cloud Infrastructure
-- Challenge: Cloud providers need to support multiple AI tenants with guaranteed performance isolation and efficient resource utilization
-- Solution: CLB's flow-based approach with RDMA queue pair awareness enables per-tenant traffic management, while distributed switch architecture provides scalable capacity
-- Benefits: Performance isolation between tenants, efficient multi-tenancy, simplified billing based on actual bandwidth utilization
-
-Research and Academic AI Clusters
-- Challenge: Universities and research institutions need cost-effective, high-performance AI infrastructure for collaborative research projects
-- Solution: 7700R4 platform with CLB provides enterprise-grade performance at scale, with simplified management reducing operational overhead
-- Benefits: Maximized GPU utilization for research budgets, simplified operations for small IT teams, support for diverse AI frameworks and workloads
-
-Edge AI and Distributed Learning
-- Challenge: Federated learning and edge AI deployments require efficient aggregation of model updates from distributed sites
-- Solution: CLB optimizes bandwidth utilization for model synchronization traffic, while distributed architecture supports hierarchical AI topologies
-- Benefits: Faster model convergence, reduced bandwidth costs, support for privacy-preserving distributed learning
-
-Partner Opportunities:
 - AI Infrastructure Projects: Design and deploy large-scale AI training clusters for enterprises and research institutions
 - HPC Modernization: Upgrade legacy InfiniBand or older Ethernet HPC networks to modern RoCE-based solutions
 - Cloud Service Providers: Build multi-tenant AI cloud platforms with guaranteed performance and simplified operations
 - GPU-as-a-Service: Enable partners to offer GPU compute services with high-performance networking infrastructure
 - AI Consulting Services: Provide expertise in optimizing AI workloads and network performance for customer deployments
 
-Resources:
+**Resources:**
+
 - Arista AI Networking White Paper: <a href="https://www.arista.com/assets/data/pdf/Whitepapers/AI-Network-WP.pdf" target="_blank">AI Network Architecture Guide</a>
 - 7700R4 Series Product Page: <a href="https://www.arista.com/en/products/7700r4-series" target="_blank">7700R4 Distributed Etherlink Switch</a>
 
