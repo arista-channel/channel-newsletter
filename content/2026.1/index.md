@@ -255,23 +255,23 @@ Partner Opportunities:
 
 ### Events
 
-**Tech Forum - Campus Products and SolutionsUpdate**
+**Tech Forum - Campus Products and Solutions Update**
 
 **Date**: Mar. 19, 2026
 
 **Location**: Zoom Online
 
-**Registration**: <a href="https://partners.arista.com/English/partners/home.aspx" target="_blank">https://partners.arista.com/English/partners/home.aspx</a>
+**Registration**: <a href="https://partners.arista.com/English/partners/home.aspx" target="_blank">Register Here</a>
 
 ---
 
-**Live Online Tech Enablement - Streamline Your Wireless Network)**
+**Live Online Tech Enablement - Streamline Your Wireless Network**
 
 **Date**: Ongoing webinar
 
 **Location**: Zoom Online
 
-**Registration**: <a href="https://solutions.arista.com/en/wi-fiweb2-0?utm_source=website&utm_medium=wifi_overviewLink" target="_blank">https://solutions.arista.com/en/wi-fiweb2-0?utm_source=website&utm_medium=wifi_overviewLink</a>
+**Registration**: <a href="https://solutions.arista.com/en/wi-fiweb2-0?utm_source=website&utm_medium=wifi_overviewLink" target="_blank">Register Here</a>
 
 ---
 
@@ -281,7 +281,7 @@ Partner Opportunities:
 
 **Location**: Zoom Online and city near you
 
-**Registration**: <a href="https://events.arista.com/events-calendar" target="_blank">https://events.arista.com/events-calendar</a>
+**Registration**: <a href="https://events.arista.com/events-calendar" target="_blank">View Calendar</a>
 
 ---
 
