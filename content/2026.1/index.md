@@ -23,7 +23,7 @@ This quarter, we're diving deep into three cutting-edge technologies that are tr
 
 ---
 
-### 1. AI Data Center Networking: Scale-Up Ethernet Architecture
+### 1️⃣ AI Data Center Networking: Scale-Up Ethernet Architecture
 
 ✍️ Authors: Brandon Mainock, Channel Systems Engineer / Laban Hickling, Sr. Systems Engineer
 
@@ -32,7 +32,8 @@ This quarter, we're diving deep into three cutting-edge technologies that are tr
 *Image caption (optional)*
 -->
 
-Overview
+Overview:
+
 In AI workloads, squeezing every ounce of performance out of your cluster can have a major impact on job completion time given the scale. Arista's AI networking solutions address this challenge through Cluster Load Balancing (CLB) and the Distributed Etherlink Switch architecture, delivering unprecedented performance for AI and HPC workloads while simplifying network operations.
 
 Key Technical Highlights:
@@ -179,7 +180,7 @@ Cluster Load Balancing (CLB) Platform Support
 
 ---
 
-### 2. Industrial-Grade Ruggedized Switching: Cognitive Campus for the Edge
+### 2️⃣ Industrial-Grade Ruggedized Switching: Cognitive Campus for the Edge
 
 ✍️ Authors: Bill Dyrek, Sr. System Engineering Manager
 
@@ -188,11 +189,11 @@ Cluster Load Balancing (CLB) Platform Support
 *Image caption (optional)*
 -->
 
-Overview
+Overview:
 
 Arista's expansion of the enterprise network into industrial and operational technology (OT) environments represents a significant growth opportunity for our Partners. To address this demand, Arista has introduced the CCS-710HXP series, a line of ruggedized, fanless Power over Ethernet (PoE) switches designed to extend the Cognitive Campus into harsh settings. Engineered to operate where standard wiring closet switches cannot, the CCS-710HXP series combines the reliability of industrial hardware with the advanced automation and security of Arista's Extensible Operating System (EOS). This platform allows partners to offer a unified "edge-to-core" architecture, bringing data center-grade manageability to factory floors, substations, and outdoor cabinets.
 
-Key Technical Highlights
+Key Technical Highlights:
 
 - Physical Resilience: Built to withstand extreme operating temperatures from -40°C to 75°C (-40°F to 167°F) and IP30-rated, complying with rigorous industrial standards including IEC 61850-3 for substations and IEEE 1613
 - Full Arista EOS: Runs the fully featured Arista EOS (not a "lite" version), providing Zero Touch Provisioning (ZTP) for rapid deployment and stateful fault repair for high availability
@@ -200,7 +201,7 @@ Key Technical Highlights
 - Advanced Segmentation: Supports EVPN VXLAN and 802.1Q VLANs for Zero Trust architectures
 - Cognitive Continuous PoE: Ensures downstream devices remain powered even during switch reboots, eliminating the need for external backup power sources
 
-Platform Specifications
+Platform Specifications:
 
 710HXP-28TXH-4S (1RU rack mount)
 - 24x 10M-1GbE RJ45 @ 60W
@@ -212,7 +213,7 @@ Platform Specifications
 - 4x 100M-5GbE RJ45 @ 90W
 - 4x 1/10G SFP+ Uplinks
 
-Partner Opportunities
+Partner Opportunities:
 
 - IT/OT Convergence Projects: Help customers merge their IT and OT infrastructures with a unified network platform
 - Industrial Modernization: Replace legacy industrial switches with Arista's Cognitive Campus architecture
@@ -257,17 +258,17 @@ Partner Opportunities
 **Tech Forum - Campus Products and SolutionsUpdate**
 **Date**: Mar. 19, 2026
 **Location**: Zoom Online
-**Registration**: [https://partners.arista.com/English/partners/home.aspx]
+**Registration**: <a href="https://partners.arista.com/English/partners/home.aspx" target="_blank">https://partners.arista.com/English/partners/home.aspx</a>
 
 **Live Online Tech Enablement - Streamline Your Wireless Network)**
 **Date**: Ongoing webinar
 **Location**: Zoom Online
-**Registration**: [https://solutions.arista.com/en/wi-fiweb2-0?utm_source=website&amp;utm_medium=wifi_overviewLink]
+**Registration**: <a href="https://solutions.arista.com/en/wi-fiweb2-0?utm_source=website&utm_medium=wifi_overviewLink" target="_blank">https://solutions.arista.com/en/wi-fiweb2-0?utm_source=website&utm_medium=wifi_overviewLink</a>
 
 **Arista Partner Events - Global Event Calendar**
 **Date**: Ongoing webinar and onsite events
 **Location**: Zoom Online and city near you
-**Registration**: [https://events.arista.com/events-calendar]
+**Registration**: <a href="https://events.arista.com/events-calendar" target="_blank">https://events.arista.com/events-calendar</a>
 
 ---
 
