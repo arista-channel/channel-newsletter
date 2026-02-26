@@ -58,26 +58,33 @@ Cluster Load Balancing (CLB) Platform Support
 - Load Balancing Modes: Flow-based and port-based approaches
 - Use Cases: AI/ML training clusters, distributed computing, high-performance storage networks
 
-**1.Technical Benefits:**
+**💡 Technical Benefits:**
 
+**1. Advanced Load Balancing**
 - **Packet Spraying Technology**: Cell-based spraying divides packets into fixed-size cells and distributes them across all available links, providing superior load balancing and collision handling compared to traditional flow-based hashing
-- **Unified Logical Device**: The 7700R4 platform treats physically distributed spines and leafs as a single logical switch, offering the simplicity and scalability of a modular chassis while maintaining the flexibility of a distributed architecture
-- **Virtual Output Queuing (VOQ)**: Credit-based global queuing system checks destination port availability before sending flows, achieving lossless properties by preventing conflicting flows on the same destination port
-- **Simplified Operations**: Single-hop design eliminates the complexity of multi-tier load balancing decisions, reducing latency and improving predictability
 - **Elephant Flow Optimization**: Addresses the fundamental problem where long-lived, high-bandwidth flows (elephant flows) cause ECMP hash collisions, leading to link congestion, packet drops, and increased GPU idle time that impacts job completion time (JCT)
 - **Flow-Based CLB**: Inspects packet headers (specifically RDMA queue pairs) via a snooping engine to differentiate flows, then assigns each flow to the least-loaded interface using a global inventory of available uplinks and downlinks
 - **Port-Based CLB**: Uses Load Balance Number (LBN) based hashing to map each server downlink to a specific switch uplink, preventing collisions by pinning flows to dedicated ports
+
+**2. Unified Architecture**
+- **Unified Logical Device**: The 7700R4 platform treats physically distributed spines and leafs as a single logical switch, offering the simplicity and scalability of a modular chassis while maintaining the flexibility of a distributed architecture
+- **Virtual Output Queuing (VOQ)**: Credit-based global queuing system checks destination port availability before sending flows, achieving lossless properties by preventing conflicting flows on the same destination port
+- **Simplified Operations**: Single-hop design eliminates the complexity of multi-tier load balancing decisions, reducing latency and improving predictability
 - **Link Restoration (Debouncing)**: Automatically detects link failures and waits for links to stabilize before rebalancing traffic, ensuring capacity is restored without causing disruption
+
+**3. Performance and Efficiency**
 - **Bandwidth Utilization**: CLB achieves near-100% bandwidth utilization by intelligently distributing flows across all available paths, compared to 60-70% with traditional ECMP
 - **Reduced Job Completion Time**: Optimized load balancing and lossless forwarding minimize GPU idle time, directly improving AI training and inference performance
 - **Scalability**: Distributed Etherlink architecture scales to thousands of GPUs in a single-hop design without increasing complexity
 - **Predictable Latency**: Single-hop topology and VOQ ensure consistent, low-latency forwarding for time-sensitive AI workloads
+
+**4. Operational Simplicity**
 - **Unified Management**: Entire distributed switch fabric managed as a single logical device through CloudVision
 - **Automated Failover**: Link restoration capabilities automatically recover from failures without manual intervention
 - **Simplified Troubleshooting**: Single-hop design and unified device model reduce complexity in diagnosing performance issues
 - **Future-Proof**: Support for 800G interfaces and modular architecture enables seamless capacity expansion
 
-**2.Partner Opportunities:**
+**🤝 Partner Opportunities:**
 
 - AI Infrastructure Projects: Design and deploy large-scale AI training clusters for enterprises and research institutions
 - HPC Modernization: Upgrade legacy InfiniBand or older Ethernet HPC networks to modern RoCE-based solutions
@@ -85,32 +92,12 @@ Cluster Load Balancing (CLB) Platform Support
 - GPU-as-a-Service: Enable partners to offer GPU compute services with high-performance networking infrastructure
 - AI Consulting Services: Provide expertise in optimizing AI workloads and network performance for customer deployments
 
-**Resources:**
+**📚 Resources:**
 
 - Arista AI Networking White Paper: <a href="https://www.arista.com/assets/data/pdf/Whitepapers/AI-Network-WP.pdf" target="_blank">AI Network Architecture Guide</a>
 - 7700R4 Series Product Page: <a href="https://www.arista.com/en/products/7700r4-series" target="_blank">7700R4 Distributed Etherlink Switch</a>
 
 ---
-
-**3. Performance and Efficiency**
-
-- **Bandwidth Utilization**: CLB achieves near-100% bandwidth utilization by intelligently distributing flows across all available paths, compared to 60-70% with traditional ECMP
-
-- **Reduced Job Completion Time**: Optimized load balancing and lossless forwarding minimize GPU idle time, directly improving AI training and inference performance
-
-- **Scalability**: Distributed Etherlink architecture scales to thousands of GPUs in a single-hop design without increasing complexity
-
-- **Predictable Latency**: Single-hop topology and VOQ ensure consistent, low-latency forwarding for time-sensitive AI workloads
-
-**4. Operational Simplicity**
-
-- **Unified Management**: Entire distributed switch fabric managed as a single logical device through CloudVision
-
-- **Automated Failover**: Link restoration capabilities automatically recover from failures without manual intervention
-
-- **Simplified Troubleshooting**: Single-hop design and unified device model reduce complexity in diagnosing performance issues
-
-- **Future-Proof**: Support for 800G interfaces and modular architecture enables seamless capacity expansion
 
 **Deployment Use Cases:**
 
