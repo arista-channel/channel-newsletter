@@ -290,8 +290,8 @@ Portal: [partners.arista.com](https://partners.arista.com)
 
 ## 📋 Newsletter Schedule
 
-**Publishing Schedule**: Quarterly (every 3 months)
-**Next Issue**: Q2 2026 (June) - Publishing 2nd week of June 2026
+- **Publishing Schedule**: Quarterly (every 3 months)
+- **Next Issue**: Q2 2026 (June) - Publishing 2nd week of June 2026
 
 ### 2026 Quarterly Schedule
 - **Q1 2026**: March (2nd week) - Current Issue
