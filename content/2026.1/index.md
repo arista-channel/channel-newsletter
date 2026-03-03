@@ -272,6 +272,36 @@ Partner Opportunities:
 
 ---
 
+**TAC Webinar Series - Activation of VeloCloud Edge**
+
+**Date**: Mar. 25, 2026
+
+**Location**: Zoom Online
+
+**Registration**: <a href="https://events.arista.com/tac-webinar-series" target="_blank">Register Here</a>
+
+---
+
+## 🎓 Arista Learning Tools
+
+### Learning Resources
+
+**Arista Labs**
+
+**Description**: Hands-on lab environment for testing and learning
+
+**Access**: <a href="https://labs.arista.com/users/login" target="_blank">Login to Arista Labs</a>
+
+---
+
+**Arista Academy**
+
+**Description**: Comprehensive training and certification platform
+
+**Access**: <a href="https://academy.training.arista.com/learn" target="_blank">Login to Arista Academy</a>
+
+---
+
 ## 📞 Contact Information
 
 **Newsletter Team**
