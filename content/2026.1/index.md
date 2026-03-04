@@ -312,7 +312,7 @@ Email: [cse-newsletter@arista.com](mailto:cse-newsletter@arista.com)
 
 Email: [partners-techhelp@arista.com](mailto:partners-techhelp@arista.com)
 
-Portal: [partners.arista.com](https://partners.arista.com)
+Portal: <a href="https://partners.arista.com" target="_blank">partners.arista.com</a>
 
 ---
 
