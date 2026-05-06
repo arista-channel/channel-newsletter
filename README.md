@@ -31,6 +31,8 @@
 
 ## 🚀 Quick Start
 
+**New Contributors:** See **[QUICKSTART.md](QUICKSTART.md)** for a detailed 5-minute getting started guide.
+
 ### Prerequisites
 
 - **Python 3.8+**
