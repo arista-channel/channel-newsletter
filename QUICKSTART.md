@@ -186,7 +186,7 @@ Once you're comfortable with the basics:
 1. **Read**: `CONTRIBUTING.md` - Full contribution guidelines
 2. **Review**: `templates/AUTHOR_GUIDE.md` - How to write technical articles
 3. **Explore**: `docs/project/` - Project documentation
-4. **Learn**: Run `scripts/core/publish-newsletter.sh --help` for publishing
+4. **Learn**: See Publishing section in `README.md` for quarterly releases
 
 ---
 

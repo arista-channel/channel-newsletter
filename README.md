@@ -57,29 +57,39 @@ source .venv/bin/activate  # macOS/Linux
 uv pip install -r requirements.txt
 ```
 
-### 2. Initialize Newsletter System
-
-```bash
-# Initialize Mike version control and create first newsletter
-./scripts/newsletter-manager.sh init
-
-# Create your first newsletter edition
-./scripts/newsletter-manager.sh create Mar.2026
-```
-
-### 3. Local Development
+### 2. Local Development
 
 ```bash
 # Start local development server
-./scripts/newsletter-manager.sh serve
+mkdocs serve
+
+# OR with Mike versioning
+mike serve
 
 # Visit: http://localhost:8000/
 ```
 
-### 4. Setup Branch Protection (Recommended)
+### 3. Edit Newsletter Content
 
 ```bash
-# Install local git hooks to prevent accidental commits to main
+# Edit the current newsletter
+# File: content/2026.1/index.md
+
+# Preview changes in browser (auto-reload enabled)
+```
+
+### 4. Publishing a New Quarterly Issue
+
+```bash
+# Deploy new quarterly version (e.g., 2026.2 for Q2)
+mike deploy --push --update-aliases 2026.2 latest
+mike set-default --push latest
+
+# List all published versions
+mike list
+
+# Delete old version if needed
+mike delete <version>
 bash scripts/install-git-hooks.sh
 
 # Setup GitHub branch protection rules (requires admin access)
