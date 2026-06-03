@@ -1,0 +1,59 @@
+# Local preview config — points at the edition you're actively editing.
+# Production deploy still uses mkdocs.yml (content/2026.1 until published).
+site_name: Engineers' Exchange
+site_url: https://arista-channel.github.io/channel-newsletter/
+site_description: Engineers sharing with engineers - Quarterly technical newsletter for Arista channel partners
+site_author: Miguel Balagot
+
+theme:
+  name: material
+  logo: assets/logo.png
+  favicon: assets/logo.png
+  palette:
+    - scheme: default
+      primary: blue
+      accent: blue
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - scheme: slate
+      primary: blue
+      accent: blue
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+
+docs_dir: content/2026.2
+
+nav:
+  - Home: index.md
+  - Current Issue: current-issue.md
+  - Articles:
+      - "DMF: Wireshark & Combo Service Node": articles/dmf-wireshark-combo-node.md
+      - "Arista Advantage in IP Broadcast": articles/arista-advantage-ip-broadcast.md
+  - Archive: archive.md
+  - About: about.md
+
+markdown_extensions:
+  - attr_list
+  - md_in_html
+
+plugins:
+  - search
+  - minify:
+      minify_html: true
+
+extra:
+  version:
+    provider: mike
+    default: latest
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/arista-channel/channel-newsletter
+    - icon: fontawesome/solid/envelope
+      link: mailto:mbalagot@arista.com
+
+copyright: Copyright &copy; 2024-2026 Arista Networks. All rights reserved.
+
+# Served via: mkdocs serve -f mkdocs.dev.yml -a 127.0.0.1:8001
+# Change docs_dir above when switching to a different edition folder.
