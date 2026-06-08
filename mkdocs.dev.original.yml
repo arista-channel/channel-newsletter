@@ -1,5 +1,6 @@
-# Local preview config — points at the edition you're actively editing.
-# Production deploy still uses mkdocs.yml (content/2026.1 until published).
+# Local preview config — "Authors' Original" staging variant of 2026.2.
+# Articles 1-3 use the authors' original submitted text (no rewrite).
+# Serve via: mkdocs serve -f mkdocs.dev.original.yml -a 127.0.0.1:8002
 site_name: Engineers' Exchange
 site_url: https://arista-channel.github.io/channel-newsletter/
 site_description: Engineers sharing with engineers - Quarterly technical newsletter for Arista channel partners
@@ -23,7 +24,7 @@ theme:
         icon: material/brightness-4
         name: Switch to light mode
 
-docs_dir: content/2026.2
+docs_dir: content/2026.2-original
 
 nav:
   - Home: index.md
@@ -51,6 +52,3 @@ extra:
       link: mailto:mbalagot@arista.com
 
 copyright: Copyright &copy; 2024-2026 Arista Networks. All rights reserved.
-
-# Served via: mkdocs serve -f mkdocs.dev.yml -a 127.0.0.1:8001
-# Change docs_dir above when switching to a different edition folder.
