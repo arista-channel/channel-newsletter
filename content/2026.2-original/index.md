@@ -34,7 +34,7 @@ This quarter, we're diving deep into four technologies that are transforming mod
 
 ### 1️⃣ DANZ Monitoring Fabric: Wireshark Integration & the Combo Service Node
 
-**✍️ Authors:** Brandon Mainock
+**✍️ Authors:** Brandon Mainock, Advisory Systems Engineer
 
 **Overview**
 
@@ -48,7 +48,7 @@ I've had plenty of mentors in my career tell me the best way to learn is to suff
 
     And of course…
 
-    - Packet Data - This query type can be useful for creating a pcaps given the parameters of your query.
+    - Packet Data - This query type can be useful for creating pcaps given the parameters of your query.
 
 ![Wireshark embedded in the DMF Controller UI](assets/originals/dmf-rId6.gif)
 
@@ -82,13 +82,12 @@ We start with two terms:
 
 **2. Service node with recording action**
 
-- **Huge win for smaller deployments**: One of the major value adds of DMF is that it scales easily and cost effectively. The pay as you grow model is truly
-- **Work flow still works**:
-
-*[Author's original draft ends here — section pending completion by the author.]*
+- **Huge win for smaller deployments**: One of the major values that DMF is known for is that it scales easily and cost effectively. Want more throughput? Add a switch or two. Want more packet recording? Add a recorder node or two. But let's flip the script and talk about the possibilities of the latter. What if you need a small deployment? If you wanted all the DMF functionality in a small deployment at minimum you'd have to have one switch (1RU), one controller (VM), a recorder node (2RU), and a service node (1RU). That's 4RU and a VM to get everything DMF has to offer for broad functionality. Now with the addition of the service node that can record we have one switch (1RU), 1 combo node (1RU) and a VM. That's 50% of the space savings to have the ability to do all features of years prior!
+- **Work flows are easier than ever!**: With the addition of recording on the combo node being an action/service means that when creating policy data paths instead of adding a service to the policy and then adding a recorder node interface as a delivery, three parts in total. Now we can simply define our ingress ports and add services including the recording service. No delivery needed as the recording will terminate at the service node. In total now only two things to focus on when making policies for DMF!
 
 **Resources:**
 
+- DMF Service Node Breakdown: <a href="https://www.arista.com/en/hg-dmf/hg-dmf-dmf-service-nodes" target="_blank">DMF Service Nodes</a>
 - DMF Product Page: <a href="https://www.arista.com/en/products/danz-monitoring-fabric" target="_blank">DANZ Monitoring Fabric</a>
 - DMF Documentation: <a href="https://www.arista.com/en/support/toi/danz" target="_blank">DMF Technical Documentation</a>
 
