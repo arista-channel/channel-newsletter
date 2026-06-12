@@ -1,5 +1,12 @@
 [
   {
+    "version": "2026.2-staging-v3",
+    "title": "2026.2 (Hybrid) \u2014 Staging v3",
+    "aliases": [
+      "staging-v3"
+    ]
+  },
+  {
     "version": "2026.2-staging-v2",
     "title": "2026.2 (Authors' Original) \u2014 Staging v2",
     "aliases": [
