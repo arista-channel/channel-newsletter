@@ -280,7 +280,7 @@ These updates show a deliberate evolution toward an abstract, highly automated n
 
 **Resources:**
 
-- Source: CloudVision Chats Ep. 5 — "Christmas Special: A Lookback on 2025 and Our Favorite Features"
+- Source: CloudVision Chats Ep. 5 — <a href="http://www.youtube.com/watch?v=Y5lvBF1__Vg" target="_blank">"Christmas Special: A Lookback on 2025 and Our Favorite Features"</a>
 - CloudVision Product Page: <a href="https://www.arista.com/en/products/eos-cloudvision" target="_blank">Arista CloudVision</a>
 
 ---
