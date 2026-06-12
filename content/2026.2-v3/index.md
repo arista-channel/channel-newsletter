@@ -212,8 +212,6 @@ As a leading vendor of the industry's migration toward networked SMPTE ST-2110 w
 
 ### 3️⃣ The Next Evolution of Network Operations: CloudVision's Unified Hierarchy & Studio Orchestration
 
-**✍️ Authors:** Drew Langin, Systems Engineer
-
 ![CloudVision Multi-Domain Network Hierarchy](assets/cv-network-hierarchy.png)
 *CloudVision's Multi-Domain Network Hierarchy — configuration is inherited top-down across Global, Location, and Switch tiers (Company XYZ → Site 1 / Site 2 → spines and leafs). This tag-based model is what the Static Configuration Studio uses in place of legacy configlet trees.*
 
