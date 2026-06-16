@@ -41,3 +41,11 @@ logs/
 
 # Mike
 .mike.yml.bak
+
+# Local-only staging archives (never push to GitHub)
+.local-archive/
+
+# Retired 2026.2 staging variant folders (local archive copies live in .local-archive/)
+content/2026.2-original/
+content/2026.2-v3/
+content/2026.2-v4/

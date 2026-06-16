@@ -27,76 +27,54 @@ This quarter, we're diving deep into four technologies that are transforming mod
 
 **✍️ Authors:** Brandon Mainock, Advisory Systems Engineer
 
-![DMF Controller Overview Dashboard](assets/dmf-controller-overview.gif)
-*The DMF Controller Overview — a single pane showing Controller Health, Switch Health, Policy Health, Smart Node Health, top interfaces by traffic, and top policies*
-
 **Overview**
 
-The best way to appreciate a great tool is to have lived without it. DANZ Monitoring Fabric (DMF) has always been one of Arista's most powerful network observability platforms — but recent releases have made centralized packet capture workflows dramatically more efficient. This article covers two major additions: a full Wireshark instance embedded directly in the DMF Controller UI, and a new Combo Service Node that unifies advanced packet processing and packet recording in a single appliance. Together, these features eliminate steps, reduce dependencies on local machines, and make deep packet inspection more accessible than ever.
+I've had plenty of mentors in my career tell me the best way to learn is to suffer through the hard/old way because you'll appreciate the new tools, it builds character, and you'll have options for solving problems. Credit where credit is due, they were right. The suffering did teach me a lot and I'm grateful for it. Of course, I still reflect when seeing the latest and greatest advancements come out on my past endeavors where a past Brandon is fighting for his life thinking "Wow, that would have been super helpful 2 years ago". Anyways this article follows a similar vein where we will talk about clunky long workflows to make centralization an easier method. All culminating into one of my favorite network observability tools Arista has to offer…DANZ Monitoring Fabric (DMF). In this article I'll cover the addition of a wireshark instance on the DMF controllers and the service nodes adding recording services, exploring how workflows become more efficient and greater functionality is more obtainable than ever.
 
-**Key Technical Highlights:**
+**Key Technical Highlights**
 
-- **Wireshark on DMF Controllers**: A full, unmodified Wireshark instance is now embedded in the DMF Controller UI — not watered down. Recorded pcaps can be viewed directly in-browser without exporting to a local machine, eliminating download delays and storage logistics.
-- **Recorder Node Query Types**: The DMF UI supports three query types against recorder nodes — Window (earliest/latest packet received), Size (expected data volume), and Packet Data (pcap generation based on defined parameters).
-- **The Combo Service Node**: A new service node variant combines advanced packet processing capabilities with a 32TB drive for packet recording — all in a single appliance. Replaces the need for separate recorder and service nodes in many deployments.
-- **Modular, Pay-As-You-Grow Scaling**: Service nodes follow a linear capacity model (10Gbx4 → 25Gbx4 → 100Gbx4) and can be added to the DMF fabric incrementally as demand grows.
+- **Wireshark on the controllers**: By no means is it new that DMF has a packet recorder node that can be integrated into a pure controller and switch deployment. The added feature set that you gain is the ability to query recorded packets via the recorder nodes dashboard in the DMF UI. These queries consist of
+    - Window - Earliest and latest packet received on the recorder node
+    - Size - Give the query parameters how much data are you expecting
 
-**Platform Specifications:**
+    And of course…
 
-**DMF Controllers — Appliance, VM, Public Cloud**
-- **Role**: Central management plane for the entire DMF fabric — switches, service nodes, and recorder nodes are all configured and managed from the Controller UI
-- **New Capability**: Full Wireshark instance now available directly in the Controller UI for in-browser pcap analysis
-- **Deployment Options**: Physical appliance, virtual machine, or public cloud instance
-- **Use Cases**: Centralized network observability, packet capture management, recorder node querying
+    - Packet Data - This query type can be useful for creating pcaps given the parameters of your query.
 
-**Service Node With Recording Action (Combo Node)**
-- **Recording Capacity**: 32TB onboard storage for packet recording
-- **Processing Capabilities**: Advanced packet processing (AppID, Deduplication, IPFIX record generation) combined with recording on a single device
-- **Interface Options**: 10Gbx4, 25Gbx4, 100Gbx4 — linear scaling model
-- **Deployment Model**: Modular, pay-as-you-grow — add nodes to the fabric as capacity needs increase
-- **Use Cases**: Smaller deployments requiring both recording and processing without separate appliances; cost-effective unified observability
+![Wireshark embedded in the DMF Controller UI](assets/originals/dmf-rId6.gif)
 
-**Service Node Terminology:**
-- **Actions**: Services configurable on an interface — examples include AppID, Deduplication, and IPFIX record generation
-- **Service Interface**: Ports assigned one or more actions; multiple actions can be stacked on a single interface at the cost of some bandwidth
+However, now the script is being flipped. Rather than querying the recorder node and exporting the pcap from the DMF UI on to a local machine that would have wireshark on it, what if wireshark was there on the DMF UI along with your pcaps!?
 
-![Configure Managed Service Action](assets/dmf-service-action-config.gif)
-*The DMF UI for configuring a Managed Service Action on a service interface — select the action type (AppID, Deduplication, IPFIX, etc.) to apply to a given port*
+- **The Combo node** DMF has also had advanced packet processing capabilities for a while as well. Offering flexible offerings of bandwidth and service use cases such as 40Gb of deduplication or 10Gb interfaces of 4 different services. What's new in the latest releases is the addition of a new type of service node that now has a 32Tb drive for packet recording functionality. All in all you get a combination of advanced packet processing and packet recording capabilities all in the same appliance.
 
----
+**Platform Specifications**
 
-**Technical Benefits:**
+**DMF Controllers - Appliance, VM, Public Cloud**
+
+**DMF Controllers**: Are the central pane for all things DMF. Since DMF is a controller based architecture the management of fabric switches and the service/recorder nodes are all configurable and interactable from the Controller UI.
+
+**Service Node With Recording Action**
+
+**Service Nodes**: Much like ice cream services nodes have different flavors. Conveniently instead of the tough decision between macadamia nut vs lemon service nodes follow a linear scaling. From the lowest capacity 10Gbx4 to 25Gbx4 to finally the 100Gbx4. These devices can also be added to a DMF fabric in a very modular fashion IE pay as you grow. If more capacity is needed, simply purchase the service node amount you need and add it to the fabric. That being said, let's talk about the value of a service node and what exactly does "advanced packet processing" means.
+
+We start with two terms:
+
+- Actions: This is the comprehensive term for services that can be configured on an interface. Examples are AppID, Deduplication, or IPFIX record generation.
+- Service Interface: These are the ports that are assigned the actions from above. Whether that is just one interface for a preferred service, or stacking multiple actions onto a single interface at the cost of some bandwidth.
+
+![Configuring a Managed Service Action on a DMF service interface](assets/originals/dmf-rId7.gif)
+
+**Technical Benefits**
 
 **1. Wireshark on DMF Controllers**
 
-- **Not watered down**: The Wireshark instance integrated into the DMF UI is the full product — profiles, custom layouts, and conversation analysis windows are all intact. Engineers who know Wireshark will find everything they expect.
-- **No more local device necessity**: Previously, viewing a pcap required exporting it from the recorder node to a local machine with Wireshark installed. For large pcaps or remote connections, this meant long download times and a dependency on having enough local storage. With Wireshark now embedded in the DMF Controller UI, pcaps can be opened and analyzed directly — no export required. This reduces data usage over remote connections, eliminates storage logistics, and consolidates the entire workflow in one place.
+- **Not watered down**: Mere moments after upgrading my DMF lab the first thing I checked was to see if the wireshark engineers have come to know and love had been put on guide rails with functionality limited to only viewing. I'm happy to report that everything from profiles and custom layout to the various windows required to view conversation have not been touched.
+- **No more local device necessity**: One pain about creating and using pcaps on the recorder node prior to the wireshark integration was that to view the pcap you would have to export the pcap from the recorder node on a local machine to view it. This became an issue when the pcap in question was big, along with remote connectivity, creating long wait times for downloads. Of course all this working on the basis you had space on the machine you were exporting to to store the pcaps. With the addition of wireshark now the already created pcaps can be viewed without any exportation required. This cuts down on data usage for remote connectivity, storage and logistics of pcap storage and ultimately makes everything easier by finding all that uou need right on the controllers.
 
-**2. Service Node with Recording Action (Combo Node)**
+**2. Service node with recording action**
 
-- **Huge win for smaller deployments**: One of DMF's core value propositions is that it scales easily and cost-effectively. The pay-as-you-grow model is truly... *[⚠️ INCOMPLETE IN SOURCE DOCUMENT — author input needed to complete this section]*
-- **Workflow still works**: *[⚠️ INCOMPLETE IN SOURCE DOCUMENT — author input needed to complete this section]*
-
----
-
-**Deployment Use Cases:**
-
-**Distributed NOC / Remote Site Troubleshooting**
-- **Challenge**: Remote network engineers need to analyze packet captures from sites they cannot physically access, but exporting large pcaps over WAN links is slow and consumes bandwidth
-- **Solution**: Wireshark embedded in the DMF Controller UI allows engineers to open and analyze pcaps directly in the browser — no download required
-- **Benefits**: Faster time-to-resolution, reduced WAN bandwidth consumption, no dependency on local machine storage capacity
-
-**Mid-Market and Branch Deployments**
-- **Challenge**: Smaller deployments need both advanced packet processing (deduplication, AppID, IPFIX) and packet recording, but deploying separate service nodes and recorder nodes adds cost and complexity
-- **Solution**: The Combo Service Node delivers both capabilities in a single appliance with 32TB of recording storage
-- **Benefits**: Reduced hardware footprint, simplified cabling and management, cost-effective entry into full-featured DMF functionality
-
-**Scalable Security Operations**
-- **Challenge**: Security teams need to capture and retain packet data at scale while also running real-time analytics — these functions previously required separate hardware
-- **Solution**: Combo nodes handle both recording and processing in one unit; additional nodes can be added to the DMF fabric as traffic volumes grow
-- **Benefits**: Linear, non-disruptive capacity expansion; unified management of recording and processing through the DMF Controller
-
----
+- **Huge win for smaller deployments**: One of the major values that DMF is known for is that it scales easily and cost effectively. Want more throughput? Add a switch or two. Want more packet recording? Add a recorder node or two. But let's flip the script and talk about the possibilities of the latter. What if you need a small deployment? If you wanted all the DMF functionality in a small deployment at minimum you'd have to have one switch (1RU), one controller (VM), a recorder node (2RU), and a service node (1RU). That's 4RU and a VM to get everything DMF has to offer for broad functionality. Now with the addition of the service node that can record we have one switch (1RU), 1 combo node (1RU) and a VM. That's 50% of the space savings to have the ability to do all features of years prior!
+- **Work flows are easier than ever!**: With the addition of recording on the combo node being an action/service means that when creating policy data paths instead of adding a service to the policy and then adding a recorder node interface as a delivery, three parts in total. Now we can simply define our ingress ports and add services including the recording service. No delivery needed as the recording will terminate at the service node. In total now only two things to focus on when making policies for DMF!
 
 **Partner Opportunities:**
 
@@ -107,6 +85,7 @@ The best way to appreciate a great tool is to have lived without it. DANZ Monito
 
 **Resources:**
 
+- DMF Service Node Breakdown: <a href="https://www.arista.com/en/hg-dmf/hg-dmf-dmf-service-nodes" target="_blank">DMF Service Nodes</a>
 - DMF Product Page: <a href="https://www.arista.com/en/products/danz-monitoring-fabric" target="_blank">DANZ Monitoring Fabric</a>
 - DMF Documentation: <a href="https://www.arista.com/en/support/toi/danz" target="_blank">DMF Technical Documentation</a>
 
@@ -116,140 +95,112 @@ The best way to appreciate a great tool is to have lived without it. DANZ Monito
 
 **✍️ Authors:** Ryan Morris, Media and Entertainment SME / Paul Mancuso, Systems Engineer
 
-![SMPTE ST-2110 Essence Breakdown](assets/st-2110-packet-breakdown.png)
+What typically comes to mind when you hear the phrase "media and entertainment"? Chances are, you picture major three-letter news stations, global sports franchises, or massive content delivery networks. However, the definition of a media and entertainment network has expanded far beyond these traditional boundaries. Today, a diverse range of verticals actively deploys robust IP broadcast capabilities. These capabilities support Fortune 500 enterprises, financial institutions, and houses of worship. Whether it involves facilitating remote education within the SLED sector, powering online training, or supporting critical video distribution in healthcare, high-quality media delivery is now a universal necessity.
 
-*Each packet represents a unique essence — video, audio, or ancillary data — within a complete SMPTE ST-2110 signal*
+Over the past decade, the distribution of video and audio content over IP networks has become commonplace, with major broadcasters paving the way by transitioning from traditional SDI to highly scalable SMPTE ST-2110 workflows. As organizations across various verticals embark on their own media distribution transformations, it is important to evaluate their infrastructure by asking: How is this IP migration being handled in the current environment, and how do we properly equip a network to deliver flawless video without dropping a single packet? Beyond core networking, what additional infrastructure components and features are required to ensure a streaming ecosystem operates with total cohesion?
 
-**Overview**
+![SMPTE ST-2110 essence breakdown](assets/originals/me-rId8.png)
 
-The definition of a media and entertainment network has expanded well beyond major broadcasters. Today, Fortune 500 enterprises, financial institutions, healthcare organizations, houses of worship, and SLED institutions all rely on robust IP broadcast capabilities for video distribution, remote education, online training, and critical media workflows. Over the past decade, the industry-wide shift from traditional SDI to SMPTE ST-2110 has made high-quality IP media delivery a universal infrastructure requirement — and the network at its core must be built to handle it flawlessly. This article explores the three core pillars of Arista's Media and Entertainment portfolio — Multicast Delivery, Precision Time Protocol (PTP), and Monitoring and Visibility — and explains why Arista is the most reliable partner for these critical deployments.
+Each element in the media stream has its own defined parameters and refers to each of them as an essence. The above image illustrates the individual essences that constitute a complete SMPTE ST-2110 signal. In this breakdown, each packet represents a unique essence, such as video, audio, or ancillary data. It is important to note that a single source can generate multiple streams for both the Audio and Ancillary signals.
 
-**Key Technical Highlights:**
+To help assess a system's readiness, the following sections will explore the key pillars of Arista's Media and Entertainment portfolio—specifically Multicast Delivery, Precision Time Protocol (PTP) distribution, and Monitoring and Visibility—and explain why Arista remains the most reliable partner at the core of these critical industry deployments.
 
-- **Media Control Service (MCS)**: A deterministic, network-aware orchestration middleware that calculates bandwidth availability across the topology before routing — eliminating the blind spots of traditional IGMP and PIM protocols and preventing link oversubscription for uncompressed video flows
-- **Precision Time Protocol (PTP) — Boundary Clock Architecture**: Arista switches configured as Boundary Clocks lock to an upstream Grandmaster and distribute precision timing independently of multicast/unicast routing, with per-interface message rate configuration supporting SMPTE 2059-2, AES67, and AESR16-2016 profiles simultaneously
-- **CloudVision Telemetry and Visibility**: Real-time PTP topology views, event-driven alarms (rogue Grandmaster detection, domain ID mismatches), per-interface PTP counter streaming, and historical time-series analysis — all in a single pane of glass
-- **Ecosystem Partnerships**: Deep integrations with broadcast industry leaders including Evertz, EVS, Imagine Communications, Lawo, Nevion (broadcast control) and Providius, Skyline (monitoring and observability) through open APIs and the MCS interface
+**Defining the Modern Media Network and Its Challenges**
 
-**Platform Specifications:**
+The transition to network media workflows is driven by the industry-wide adoption of SMPTE ST-2110. Unlike traditional SDI formats, SMPTE ST-2110 breaks uncompressed signals into individual, unique multicast streams for video, audio, and ancillary data (such as closed captioning). While this provides incredible format flexibility and workflow agility, it modifies the underlying workflow of routing broadcast systems in a media environment - and the scale of the network.
 
-**Arista EOS with Media Control Service (MCS)**
-- **Role**: Software-defined multicast orchestration engine for SMPTE ST-2110, ST-2022, AES67, and related flow types
-- **Integration**: Open API interface for direct integration with third-party broadcast controllers; programs the multicast forwarding information base (MFIB) in parallel across the fabric
-- **Key Capabilities**: Bandwidth-aware flow provisioning, oversubscription prevention, real-time notifications for broadcast controllers and monitoring tools
-- **Reliability**: State-streaming and isolated software processes in EOS ensure fault isolation even under tens of thousands of concurrent multicast groups
-- **Use Cases**: Live broadcast routing, large-scale uncompressed video distribution, multi-source media workflows
+Routing a single camera feed might require adjusting ten different multicast groups simultaneously, with video flows reaching up to 10.6 Gbps. Because traditional routing protocols like IGMP and PIM are completely unaware of network topology or link bandwidth, they can easily cause oversubscription and packet drops when multiple heavy video flows land on the same link. In live broadcast environments—where a single frame drop during a major sporting event or a critical healthcare stream can cost millions of dollars or compromise critical operations—these legacy protocols are often inadequate.
 
-![MCS Software-Defined Architecture](assets/me-mcs-architecture.png)
-*Arista's software-defined architecture for IP media: CloudVision, NetDL, DMF, and partner control systems connect via Open APIs to MCS, which performs data-driven multicast flow provisioning through EOS into the spine-leaf fabric and out to media endpoints*
+**The Arista Value: Pillars of IP Media Success**
 
-**CloudVision (CVP and CVaaS)**
-- **Role**: Unified multi-domain management, automation, and observability platform spanning M&E, Data Center, Campus, and WAN infrastructure
-- **PTP Visibility**: Real-time Boundary Clock topology maps, per-interface PTP message counters, Grandmaster ID (GMID) change alerts, PTP Domain ID inconsistency detection
-- **Historical Analysis**: Time-series database for retrospective analysis of timing fluctuations and systemic changes across the fabric
-- **Operational Model**: Consistent management plane across all domains — same workflows used for DC and Campus apply directly to M&E infrastructure
-- **Use Cases**: Day 2 operations, change control, continuous telemetry, multi-domain troubleshooting
+The effectiveness of Arista's solutions in overcoming these obstacles is derived from a design philosophy established in the demanding realms of high-frequency trading and hyperscale cloud environments. In these sectors, unwavering reliability, balanced multicast distribution, and a necessity to completely prevent packet loss are fundamental necessities. Arista's structural superiority is founded on several core principles. Let's delve into them.
 
----
+**Software Reliability and Advanced Multicast**: Arista understands that the primary requirements of an ST-2110 network—massive multicast scaling and Precision Time Protocol (PTP)—mirror the intense demands of the financial sector. Arista's Extensible Operating System (EOS) provides state-streaming capabilities and isolated software processes, ensuring fault isolation and network resilience even under the load of tens of thousands of multicast groups.
 
-**Technical Benefits:**
+**Media Control Service (MCS)**: To solve the blind spots of IGMP and PIM, Arista developed the Media Control Service (MCS), a deterministic, network-aware orchestration middleware. MCS interacts directly with broadcast controllers to calculate bandwidth availability across the topology before routing. By programming the multicast forwarding information base (MFIB) in parallel across the fabric, MCS is not only significantly faster than traditional routing protocols while protecting links from oversubscription. Arista further eases the manageability of MCS through an easy-to-use API interface. Broadcast controllers integrate with this API interface to provision multicast flows required to support SMPTE ST2110, ST2022, AES67 and many other flow types.
 
-**1. Advanced Multicast with Media Control Service (MCS)**
+Therefore, the key advantages of MCS include:
 
-- **Eliminates IGMP/PIM blind spots**: Traditional multicast routing protocols have no awareness of network topology or available bandwidth. A single camera feed in SMPTE ST-2110 can generate video flows up to 10.6 Gbps, and routing multiple heavy flows without bandwidth awareness causes oversubscription and packet drops — unacceptable in live broadcast
-- **Deterministic flow provisioning**: MCS calculates guaranteed bandwidth paths before committing a route, then programs the MFIB in parallel across the fabric. This makes MCS significantly faster than traditional protocols while ensuring no link is ever oversubscribed
-- **Broadcast controller integration**: MCS exposes an easy-to-use API that broadcast controllers integrate with directly to provision multicast flows — supporting SMPTE ST-2110, ST-2022, AES67, and more
-- **Real-time notifications**: Broadcast controllers and monitoring tools can subscribe to MCS notifications for instant, actionable updates on routing status and system health
+- Faster than traditional multicast routing protocols
+- Bandwidth protection, from oversubscription and larger than expected flow provisioning
+- Real-time notifications that broadcast controllers and other network monitoring tools can subscribe to - provides crucial information for system health and routing status of the media workflow
 
-**2. Precision Time Protocol (PTP) — Boundary Clock Deployment**
+The following diagram illustrates Arista's software-defined architecture for modern IP media networks. On the left, third-party broadcast controllers and management platforms (like CloudVision) use Open APIs to communicate with Arista's Media Control Service (MCS). Acting as the intelligent orchestration brain, MCS performs "data-driven multicast flow provisioning" to calculate guaranteed bandwidth paths across the network. It then pushes these deterministic routing instructions through Arista's Extensible Operating System (EOS) directly into the underlying physical spine-leaf network fabric, seamlessly and reliably connecting the live media endpoints (cameras, audio feeds, and displays) shown at the bottom.
 
-- **Independent, reliable timing distribution**: Arista switches in Boundary Clock mode lock to an upstream Grandmaster and distribute precision timing to all PTP-enabled interfaces without relying on multicast or unicast routing — providing resilience against routing changes
-- **Per-interface message rate flexibility**: Media environments often have hundreds of endpoints with different timing requirements. Boundary Clocks allow administrators to configure PTP messaging rates on a per-interface basis, supporting SMPTE 2059-2, AES67, and the common AESR16-2016 profile simultaneously on the same switch
+![Arista's software-defined architecture for IP media](assets/originals/me-rId9.png)
 
-![PTP Boundary Clock Message Flow and EOS Configuration](assets/me-ptp-boundary-clock-diagram.png)
-*PTP Boundary Clock mode: the switch locks to an upstream Grandmaster and independently distributes Announce, Sync, Follow-Up, Delay Request, and Delay Response messages to each endpoint — with per-interface messaging rates configurable directly in EOS*
+**Precision Time Protocol (PTP)**: Flawless media synchronization requires a robust PTP stack. Arista network switches support both Boundary and Transparent Clocks, but typically Boundary Clocks are selected in order to lock to an upstream Grandmaster and reliably distribute timing to endpoints. This architecture reduces reliance on complex routing while providing granular, real-time visibility into clock accuracy, offsets, and network delays directly within CloudVision.
 
-- **Rogue Grandmaster detection**: CloudVision raises an immediate alert if any switch begins taking timing from an unapproved clock source (unexpected GMID event), preventing timing instability before it impacts media streams
+Another advantage of deploying a Boundary Clock is the inherent flexibility. Media systems typically have hundreds of endpoints, and at times, some will require different PTP messaging rates. A Boundary Clock provides the ability to granularly adjust the messaging rates on a per interface level - where some may run on the SMPTE 2059-2 profile, and others will run on the AES67 profile. There is a common profile that accommodates both of the profiles referenced above - AESR16-2016 - and this is often used to provide the most coverage while maintaining a consistent messaging rate.
 
-![CloudVision — Unexpected PTP GMID Event Rule](assets/me-cvp-unexpected-gmid-event.png)
-*CloudVision Event Generation Configuration for an Unexpected PTP GMID — triggers a Critical alert if a switch locks to any Grandmaster not on the approved list, catching rogue clock sources before they destabilize the media environment*
+As shown in the following diagram, Arista switches configured in Boundary Clock mode offer a distinct advantage: they operate independently of multicast or unicast routing. By locking onto an upstream Grandmaster or another Boundary Clock, they efficiently distribute precision timing across all PTP-enabled interfaces. Users can easily configure settings globally or for each interface, but they must ensure consistent messaging rates between connected interfaces, particularly the announce interval.
 
-- **Domain ID integrity monitoring**: CloudVision's Inconsistent PTP Domain ID event alerts operators the moment a switch joins the wrong logical timing domain — far more actionable than a generic PTP error
+![PTP Boundary Clock message flow](assets/originals/me-rId10.png)
 
-![CloudVision — Inconsistent PTP Domain ID Event Rule](assets/me-cvp-inconsistent-domain-id-event.png)
-*CloudVision Event Generation Configuration for an Inconsistent PTP Domain ID — alerts immediately if a switch's active domain does not match the expected domain (e.g., Domain 127), ensuring switches stay in the correct logical timing group*
+The image above demonstrates two aspects. Firstly, PTP message transaction sent and received between switches and endpoint and displays the messaging for a switch configured as a boundary clock. Secondly, the image details the advantage of using Boundary Clock mode, there is flexibility in configuring message rates on a per interface basis. This granular control is particularly advantageous when integrating diverse endpoints that demand unique announcement intervals compared to the rest of the fabric. By tailoring message rates on a per-interface basis, Arista provides the necessary flexibility to support these specific device requirements without compromising the timing integrity of the broader media environment.
 
-- **Granular counter visibility**: Per-interface PTP message counters (Announce, Sync, Follow-Up, Delay Request, Delay Response) in both EOS CLI and CloudVision make it straightforward to identify silent failures or unexpected message bursts that could overwhelm the switch control plane
+A key advantage in how Arista operationalizes Boundary Clocks in media networks is the significant visibility of Arista EOS and CloudVision in tracking the performance and events. One such event is the triggering of an election for a new Grandmaster by the Best Master Clock Algorithm (BMCA). Here are example values from EOS CLI.
 
-![EOS CLI — show ptp monitor (Boundary Clock Offset from Master)](assets/me-ptp-monitor-cli.png)
-*EOS `show ptp monitor` output showing Offset from Master, Mean Path Delay, and Skew per interface — key values for validating Boundary Clock accuracy against the upstream Grandmaster*
+**PTP Message Counters Per Interface (CLI)**
 
-![EOS CLI — show ptp interface counters (Per-Interface Message Counts)](assets/me-ptp-interface-counters-cli.png)
-*EOS `show ptp interface ethernet 49/1 counters` — granular per-interface breakdown of every PTP message type sent and received, essential for identifying silent failures or asymmetric message flows*
+The Boundary Clock Per Interface Message Count event provides granular visibility into the volume of Precision Time Protocol (PTP) packets flowing across every individual switch port. Since PTP is a "chatty" protocol, an Arista switch acting as a Boundary Clock constantly exchanges messages (Announce, Sync, Follow-Up, Delay Request, and Delay Response) with attached cameras and monitors. This counter is crucial for monitoring system health: missing any of the messages described above can negatively affect a device's timing accuracy, with standard CLI providing insight data on a granular, per-interface detail of these values.
 
-**3. Monitoring, Visibility, and Ecosystem Partnerships**
+![PTP message counters per interface (EOS CLI)](assets/originals/me-rId11.png)
 
-- **Not a black box**: A common concern when migrating from SDI to IP is losing the intuitive signal routing visibility of traditional broadcast infrastructure. Arista addresses this directly through deep integrations with industry-leading monitoring platforms (Providius, Skyline) and broadcast controllers (Evertz, EVS, Imagine Communications, Lawo, Nevion)
-- **CloudVision as the unified control plane**: The same CloudVision workflows used for Data Center and Campus management apply directly to M&E — consistent configuration management, change control, and real-time telemetry across all domains from a single platform
+**Monitoring Accuracy of Boundary Clock compared to upstream GM**
 
-![CloudVision — PTP Boundary Clock Topology](assets/me-cvp-ptp-topology.png)
-*CloudVision PTP topology view showing which Boundary Clock is locking to which Grandmaster — multiple GM clock sources are color-coded, making it immediately clear when a switch is locking to an unexpected or secondary clock*
+![Monitoring Boundary Clock accuracy compared to upstream Grandmaster](assets/originals/me-rId12.png)
 
-![CloudVision — PTP Per-Interface Message Counts Dashboard](assets/me-cvp-ptp-message-counts.png)
-*CloudVision Boundary Clock PTP counter dashboard for BC1-smv121 — real-time and historical per-interface counts for every PTP message type across all switch ports, enabling instant detection of message bursts or silent failures*
+The following images display how CloudVision (CVP and CVaaS) tools leverage streamed telemetry from Arista network switches to capture data on the monitoring accuracy of the Boundary Clock compared to the upstream Grandmaster (GM). This capability allows network operators to gain deep insight into real-time network performance and behavior by providing comprehensive PTP topology views, event-driven alarms, and the continuous streaming of PTP counters. Additionally, CloudVision's time-series database enables engineers to perform historical analysis on past timing fluctuations or systemic changes that have occurred across the fabric.
 
-- **Dedicated M&E expertise**: Arista's Media and Entertainment Working Group brings decades of practical broadcast industry experience, including engineers with backgrounds inside television stations and major system integration firms, plus patented innovations in MCS flow routing and management
+The graphic image shows how CloudVision can identify PTP problems and make the PTP architecture easier to grasp. This initial CVP graphic displays the CloudVision PTP Boundary Clock topology and which Grandmaster each Boundary Clock is locking to.
 
----
+![CloudVision PTP Boundary Clock topology](assets/originals/me-rId13.png)
 
-**Deployment Use Cases:**
+The Unexpected PTP GMID (Grandmaster ID) graphic and event alert in Arista CloudVision provides a critical security and stability safeguard for your network's timing infrastructure. This feature alerts network operators immediately if a switch starts taking its time synchronization from an unapproved or "rogue" clock source.
 
-**Live Broadcast and Sports Production**
-- **Challenge**: A single dropped frame during a major sporting event or live news broadcast can cost millions of dollars. Legacy multicast protocols cannot guarantee bandwidth for multiple simultaneous 10.6 Gbps video flows
-- **Solution**: MCS calculates bandwidth availability across the spine-leaf fabric before routing any flow, preventing oversubscription. EOS state-streaming and fault isolation ensure the network remains stable under the load of tens of thousands of multicast groups
-- **Benefits**: Zero frame drops, deterministic routing, real-time alerts on any flow or timing anomaly
+![CloudVision Unexpected PTP GMID event alert](assets/originals/me-rId14.png)
 
-**Enterprise Video Distribution**
-- **Challenge**: Large enterprises require high-quality video distribution for executive communications, all-hands broadcasts, and training — but traditional AV infrastructure doesn't scale to modern IP networks
-- **Solution**: Arista's ST-2110 and AES67-capable infrastructure, managed through CloudVision, extends broadcast-grade reliability to enterprise environments without requiring specialized broadcast engineers for day-to-day operations
-- **Benefits**: Unified management alongside existing campus/DC infrastructure, consistent operational model, broadcast-grade reliability at enterprise scale
+While the GMID alert ensures your switches are listening to the right hardware clock, the Inconsistent PTP Domain ID event ensures your switches are participating in the correct logical timing network altogether. In PTP, a "Domain" is an isolated grouping of clocks. For instance, a device configured for Domain 127 will completely ignore timing packets from Domain 119. This CloudVision event alerts network operators immediately if a switch's active PTP Domain ID does not match the expected Domain ID set in your operational rules. It is much more useful to receive information in this manner as opposed to a general PTP error alert.
 
-**Healthcare Video and Critical Media**
-- **Challenge**: Healthcare environments depend on flawless video streams for surgical guidance, remote diagnostics, and patient monitoring — any interruption has direct clinical consequences
-- **Solution**: Boundary Clock PTP distribution ensures surgical-precision timing synchronization; MCS guarantees bandwidth for critical video flows; CloudVision provides immediate alerting on any timing or routing anomaly
-- **Benefits**: Continuous stream integrity, instant fault detection, simplified compliance with the unified management model
+![CloudVision Inconsistent PTP Domain ID event alert](assets/originals/me-rId15.png)
 
-**Education and SLED Remote Learning**
-- **Challenge**: Schools, universities, and government institutions increasingly rely on IP video for remote instruction and distance learning, but lack dedicated broadcast engineering staff
-- **Solution**: CloudVision's simplified management plane and MCS's automated flow provisioning reduce the operational burden — broadcast-grade infrastructure that generalist IT teams can manage
-- **Benefits**: Reduced operational complexity, broadcast-quality remote learning delivery, scalable as institutions grow
+The CloudVision Boundary Clock PTP Counter graphic provides highly granular, real-time visibility into the actual volume of Precision Time Protocol (PTP) packets flowing across every individual switch port.
 
-**Financial Services Video**
-- **Challenge**: Financial institutions use video for trading floor communications, executive broadcasts, and regulatory recordings — all requiring low-latency, lossless delivery
-- **Solution**: Arista's architecture was purpose-built for the demands of high-frequency trading environments, where the same requirements for lossless delivery and deterministic latency apply directly to media workflows
-- **Benefits**: Proven reliability in the most demanding environments, lossless video delivery, consistent latency
+To understand why this is so valuable, you have to remember that PTP is an incredibly "chatty" protocol. Remember our earlier discussion. An Arista switch acting as a Boundary Clock (BC) is constantly exchanging a very specific rhythm of multicast messages—Announce, Sync, Follow-Up, Delay Request, and Delay Response—with the cameras and monitors attached to it.
 
----
+In a healthy SMPTE ST 2110 environment, a device receiving timing should request the time at a very predictable mathematical rate (e.g., sending Delay Requests 8 times a second). A sudden burst of thousands of requests spraying the network can overwhelm a switch's control plane. Conversely, a sudden absence of timing messages would indicate a silent failure. CVP can offer granular detail of these issues on a per interface specificity.
 
-**Partner Opportunities:**
+![CloudVision Boundary Clock PTP counter dashboard](assets/originals/me-rId16.png)
 
-- **ST-2110 Migration Projects**: Guide customers through the transition from SDI to IP — Arista's dedicated M&E team and patented MCS technology make this a differentiated, consultative sale
-- **Enterprise AV / Video Distribution**: Any enterprise with internal broadcast, executive communications, or large-scale video distribution needs is a potential M&E opportunity — the market is far broader than traditional broadcasters
-- **Healthcare Infrastructure**: Position Arista M&E solutions in healthcare accounts where video is clinical infrastructure, not just communications
-- **SLED and Education**: Remote and hybrid learning initiatives create ongoing demand for broadcast-grade IP video infrastructure in schools, universities, and government agencies
-- **Monitoring and Visibility Upsell**: Engage broadcast control and monitoring ISV partners (Evertz, EVS, Providius, Skyline) to expand deal scope beyond switching into full-stack IP media solutions
+Comprehensive PTP topology views, event-driven alarms, and the continuous streaming of PTP counters provide operators with an unprecedented window into real-time network performance and behavior. Furthermore, leveraging CloudVision's time-series database, engineers can perform historical analysis to gain granular insight into past timing fluctuations or systemic changes that have traversed the fabric.
+
+**Ecosystem Partnerships and Visibility**: Broadcasters often fear that migrating to IP will turn their infrastructure into a "black box." Arista mitigates this by partnering heavily with broadcast technology leaders like Evertz, EVS, Imagine Communications, Lawo, and Nevion for Broadcast Control applications and Providius and Skyline for Monitoring and Observability. By integrating deeply with these partners, Arista helps to reshape IP Media workflows to provide operators and engineers with data critical to understanding the minute by minute workflow changes.
+
+**Dedicated Organizational Expertise**
+
+Technology alone does not guarantee a successful IP migration; the people behind the architecture are a critical business driver. Arista's dedicated Media and Entertainment Working Group brings decades of combined, practical industry experience, with experts who have previously worked deep within television stations and major system integration firms. This extensive real-world broadcast knowledge is further solidified by the team's specialized industry patents—including patented innovations surrounding Media Control Service flow routing and management. This proven authority makes Arista not just a hardware vendor, but a seasoned consulting partner capable of guiding enterprises through complex ST-2110 migrations.
+
+The CloudVision platform extends its value beyond real-time monitoring and visibility to serve as the unified, multi-domain control and automation plane for the entire media environment. Just as network engineers leverage CloudVision for consistent configuration management and Day 2 operations within Data Center and Campus environments, the same operational model applies seamlessly to M&E infrastructure. This consistency is the core value proposition of CloudVision's multi-domain approach: providing a single pane of glass for automated deployments, change control, and continuous telemetry across all segments—from core broadcast networks to enterprise-wide video distribution. By consolidating management across domains (DC, Campus, WAN/Branch, and Cloud), Arista significantly reduces operational complexity, streamlines network security, and enables faster troubleshooting through a consistent, single-platform architecture.
+
+**Assessing the Infrastructure Readiness**
+
+As media and entertainment workflows continue to expand into enterprise, education, and healthcare operations, it is imperative to evaluate the foundation of IP distribution. Based on the pillars outlined above, consider the following questions when reviewing the environment:
+
+- Does the current network infrastructure actively prevent link oversubscription when routing massive uncompressed video flows?
+- Do network and broadcast controllers share a unified, real-time view of network topology and bandwidth state?
+- Is there a means for instant, actionable telemetry and tallies if a media flow fails or a PTP Grandmaster clock loses sync?
+
+As a leading vendor of the industry's migration toward networked SMPTE ST-2110 workflows, Arista delivers the unwavering software reliability and advanced multicast capabilities required for modern media ecosystems. By leveraging the deterministic orchestration of Media Control Service (MCS) and a robust PTP stack utilizing Boundary Clock deployments, Arista ensures flawless synchronization and total infrastructure visibility. Arista is established as the premier partner for essential broadcast transitions through its extensive suite of tailored technologies and influential industry alliances. We are eager to support our channel partners as they undertake and execute new broadcast initiatives. For more information, please contact media-ent@arista.com
 
 **Resources:**
 
 - M&E Team Contact: [media-ent@arista.com](mailto:media-ent@arista.com)
 - Arista M&E Solutions: <a href="https://www.arista.com/en/solutions/media-entertainment" target="_blank">Media and Entertainment Solutions Page</a>
-- MCS Documentation: <a href="https://www.arista.com/en/support/toi/media-control-service" target="_blank">Media Control Service Technical Overview</a>
 
 ---
 
 ### 3️⃣ The Next Evolution of Network Operations: CloudVision's Unified Hierarchy & Studio Orchestration
-
-**✍️ Authors:** Drew Langin, Systems Engineer
 
 ![CloudVision Multi-Domain Network Hierarchy](assets/cv-network-hierarchy.png)
 *CloudVision's Multi-Domain Network Hierarchy — configuration is inherited top-down across Global, Location, and Switch tiers (Company XYZ → Site 1 / Site 2 → spines and leafs). This tag-based model is what the Static Configuration Studio uses in place of legacy configlet trees.*
@@ -319,8 +270,8 @@ These updates show a deliberate evolution toward an abstract, highly automated n
 
 **Resources:**
 
-- Source: CloudVision Chats Ep. 5 — "Christmas Special: A Lookback on 2025 and Our Favorite Features"
-- CloudVision Product Page: <a href="https://www.arista.com/en/products/eos-cloudvision" target="_blank">Arista CloudVision</a>
+- Source: CloudVision Chats Ep. 5 — <a href="http://www.youtube.com/watch?v=Y5lvBF1__Vg" target="_blank">"Christmas Special: A Lookback on 2025 and Our Favorite Features"</a>
+- If you enjoyed this article, you may want to explore the entire CloudVision Chats Podcast library at <a href="https://www.youtube.com/playlist?list=PL3NLCp8DnVfvSQVlAAT4Pm4I2f7CbgTCA" target="_blank">CloudVision Chats Podcast</a>
 
 ---
 
