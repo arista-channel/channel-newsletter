@@ -25,7 +25,7 @@ Welcome to the Arista Channel Newsletter archive. Browse all past editions of ou
 - Industrial-Grade Ruggedized Switching (710HXP)
 - 800G R4 Portfolio announcement
 
-[📖 Read Q1 2026 Issue](../2026.1/)
+[📖 Read Q1 2026 Issue](../../2026.1/)
 
 ---
 
