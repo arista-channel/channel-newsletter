@@ -1,5 +1,9 @@
 # Local preview config — points at the edition you're actively editing.
 # Production deploy still uses mkdocs.yml (content/2026.1 until published).
+#
+# Theme parity: keep theme, nav, plugins, and extensions identical to mkdocs.yml.
+# Do NOT add staging-only UI (e.g. burger-nav.css, navigation.sections, Article References nav).
+# Only docs_dir may differ from mkdocs.yml.
 site_name: Engineers' Exchange
 site_url: https://arista-channel.github.io/channel-newsletter/
 site_description: Engineers sharing with engineers - Quarterly technical newsletter for Arista channel partners
@@ -28,9 +32,6 @@ docs_dir: content/2026.2
 nav:
   - Home: index.md
   - Current Issue: current-issue.md
-  - Articles:
-      - "DMF: Wireshark & Combo Service Node": articles/dmf-wireshark-combo-node.md
-      - "Arista Advantage in IP Broadcast": articles/arista-advantage-ip-broadcast.md
   - Archive: archive.md
   - About: about.md
 

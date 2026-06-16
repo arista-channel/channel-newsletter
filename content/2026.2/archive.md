@@ -4,29 +4,32 @@ Welcome to the Arista Channel Newsletter archive. Browse all past editions of ou
 
 ## 📚 2026 Editions
 
-### Q1 2026 - March (Current Issue)
-**Published**: March 11, 2026  
+### Q2 2026 - June (Current Issue)
+**Published**: June 2026  
 **Status**: ✅ Current Issue  
 **Highlights**:
-- Strategic partnerships with Palo Alto Networks
-- AI infrastructure leadership announcements
-- Scale-up Ethernet innovation
-- Comprehensive workgroup updates
+- DANZ Monitoring Fabric and Wireshark integration
+- IP Broadcast and ST 2110 media networking
+- CloudVision unified hierarchy and Studio orchestration
+- AI Fabrics scale-up and scale-out architectures
 
-[📖 Read Q1 2026 Issue](index.md)
+[📖 Read Q2 2026 Issue](index.md)
+
+---
+
+### Q1 2026 - March (Archived)
+**Published**: March 2026  
+**Status**: 📚 Archived  
+**Highlights**:
+- AI Data Center Networking and Scale-Up Ethernet
+- Industrial-Grade Ruggedized Switching (710HXP)
+- 800G R4 Portfolio announcement
+
+[📖 Read Q1 2026 Issue](../2026.1/)
 
 ---
 
 ## 📅 Upcoming Editions
-
-### Q2 2026 - June
-**Scheduled**: 2nd week of June 2026  
-**Status**: 📝 In Planning  
-**Expected Topics**:
-- Q2 product releases
-- Summer training events
-- Mid-year partner program updates
-- Industry trends analysis
 
 ### Q3 2026 - September
 **Scheduled**: 2nd week of September 2026  
@@ -52,7 +55,7 @@ Welcome to the Arista Channel Newsletter archive. Browse all past editions of ou
 
 | Metric | Value |
 |--------|-------|
-| **Total Issues Published** | 1 |
+| **Total Issues Published** | 2 |
 | **Publishing Frequency** | Quarterly (every 3 months) |
 | **Archive Format** | Permanent, version-controlled |
 | **Search Capability** | Full-text search enabled |
@@ -65,10 +68,10 @@ Use the search function (top of page) to find specific topics, products, or part
 
 **Popular Search Terms**:
 - AI networking
-- Product updates
-- Partner success
+- DANZ Monitoring Fabric
+- CloudVision
+- IP broadcast
 - Training events
-- Security solutions
 
 ---
 
@@ -124,4 +127,3 @@ Portal: [partners.arista.com](https://partners.arista.com)
 ---
 
 *Thank you for being a valued member of the Arista channel community!*
-

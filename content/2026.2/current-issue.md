@@ -9,9 +9,9 @@
 
 ## 📰 Current Issue Overview
 
-**Issue**: Q1 2026 (March)  
+**Issue**: Q2 2026 (June)  
 **Publication Status**: Live  
-**Release Date**: March 11, 2026 (2nd week)  
+**Release Date**: June 2026 (2nd week)  
 **Version**: Latest  
 **Publishing Frequency**: Quarterly (every 3 months)
 
@@ -20,16 +20,16 @@
 ## 🎯 This Quarter's Focus
 
 ### Key Highlights
-- **Strategic Partnerships**: Arista and Palo Alto Networks AI security collaboration
-- **AI Infrastructure**: New platforms delivering breakthrough performance  
-- **Scale-Up Ethernet**: Revolutionary architecture for AI clusters
-- **Partner Success**: Featured success stories and achievements
-- **Upcoming Events**: AI networking forums and hands-on training
+- **DANZ Monitoring Fabric**: Wireshark integration and the Combo Service Node
+- **IP Broadcast**: Arista's advantage in ST 2110 and media networking
+- **CloudVision**: Unified hierarchy and Studio orchestration for network operations
+- **AI Fabrics**: Scale-up and scale-out architectures for AI workloads
+- **Industry Spotlight**: Gartner Magic Quadrant leadership and Cognitive Campus journey
 
 ### Content Sections
-- ✅ **Product Updates** - Comprehensive workgroup releases and feature announcements
-- ✅ **Industry Spotlight** - Major Arista news stories with market analysis
-- ✅ **Upcoming Events** - Q1-Q2 training and forums
+- ✅ **Product Updates** - 4 technical deep-dive articles
+- ✅ **Industry Spotlight** - Market recognition and partner opportunities
+- ✅ **Upcoming Events** - Tech forums and training sessions
 - ✅ **Contact Information** - Newsletter team and partner support
 
 ---
@@ -39,9 +39,9 @@
 | Metric | Value |
 |--------|-------|
 | **Total Sections** | 5 main sections |
-| **External Links** | 3 blog articles (new tab) |
+| **Technical Articles** | 4 deep-dive articles |
+| **Industry News** | Gartner MQ and Cognitive Campus updates |
 | **Upcoming Events** | 4 training sessions |
-| **Workgroup Updates** | 10 product categories |
 | **Publishing Frequency** | Quarterly (every 3 months) |
 
 ---
@@ -49,7 +49,7 @@
 ## 🔗 Quick Navigation
 
 ### Direct Links
-- [📖 Read Full Issue](index.md) - Complete Q1 2026 newsletter
+- [📖 Read Full Issue](index.md) - Complete Q2 2026 newsletter
 - [📋 About Newsletter](about.md) - Mission and audience information
 - [📚 Archive](archive.md) - Previous newsletter editions
 
@@ -62,17 +62,18 @@
 
 ## 📅 Publication Timeline
 
-### Q1 2026 Issue (March)
-- **Content Creation**: March 1-8, 2026
-- **Review & Approval**: March 9-10, 2026  
-- **Publication Date**: March 11, 2026 (2nd week)
+### Q2 2026 Issue (June)
+- **Content Creation**: June 2026
+- **Review & Approval**: June 2026
+- **Publication Date**: June 2026 (2nd week)
 - **Distribution**: Email notifications sent
-- **Archive Status**: Permanently archived as Mar.2026
+- **Archive Status**: Permanently archived as 2026.2
 
 ### Next Issue Preview
-- **Q2 2026 (June)**: Scheduled for 2nd week of June 2026
-- **Focus Areas**: Q2 product releases, partner program updates, summer events
-- **Content Deadline**: June 8, 2026
+- **Q3 2026 (September)**: Scheduled for 2nd week of September 2026
+- **Version**: 2026.3
+- **Focus Areas**: Q3 product releases, fall events, partner program updates
+- **Content Deadline**: September 2026
 
 ---
 
@@ -81,72 +82,32 @@
 | Quarter | Month | Release Week | Status |
 |---------|-------|--------------|--------|
 | Q1 2026 | March | 2nd week | ✅ Published |
-| Q2 2026 | June | 2nd week | 📝 Planned |
+| Q2 2026 | June | 2nd week | ✅ Published |
 | Q3 2026 | September | 2nd week | 📝 Planned |
 | Q4 2026 | December | 2nd week | 📝 Planned |
 
 ---
 
-## 🎯 Reader Engagement
+## 🎯 Featured Technical Content
 
-### Feedback Received
-- Positive response to quarterly format
-- Request for more technical deep-dive content
-- Regional event coverage expansion
-- Mobile-friendly format improvements
+### Article 1: DANZ Monitoring Fabric
+**Focus**: Wireshark integration and the Combo Service Node  
+**Key Topics**: DMF controller architecture, service actions, partner deployment opportunities
 
-### Upcoming Improvements
-- Enhanced mobile responsiveness
-- Interactive content elements
-- Video integration capabilities
-- Personalized content recommendations
+### Article 2: IP Broadcast
+**Focus**: Arista's advantage in IP broadcast and media networking  
+**Key Topics**: ST 2110 packet architecture, MCS, PTP timing, CVP monitoring
 
----
+### Article 3: CloudVision
+**Focus**: Unified hierarchy and Studio orchestration  
+**Key Topics**: Workspace Island, Change Control, Virtual Stack View, network hierarchy
 
-## 📈 Performance Metrics
-
-### Engagement Stats
-- **Newsletter Views**: Tracking via GitHub Pages analytics
-- **Link Clicks**: External blog article engagement
-- **Partner Portal Visits**: Referral traffic monitoring
-- **Event Registrations**: Training session sign-ups
-
-### Distribution Reach
-- **Channel Partners**: Direct email distribution
-- **End Customers**: Partner forwarding and web access
-- **Geographic Coverage**: Global Arista partner network
-- **Archive Access**: Historical issue browsing
-
----
-
-## 🔧 Technical Details
-
-### Platform Information
-- **Hosting**: GitHub Pages with Mike versioning
-- **Format**: Markdown with Material for MkDocs theme
-- **Version Control**: Git-based content management
-- **Deployment**: Automated via deployment scripts
-
-### Accessibility Features
-- **Mobile Responsive**: Optimized for all device sizes
-- **Search Enabled**: Full-text search across all issues
-- **Print Friendly**: Clean printing layout
-- **Screen Reader**: Semantic HTML structure
-
----
-
-## 🎉 Inaugural Quarterly Edition
-
-This is our **first quarterly newsletter**, transitioning from monthly to a more comprehensive quarterly format. Each edition will provide:
-
-- **Deeper Analysis**: More in-depth coverage of trends and technologies
-- **Comprehensive Updates**: Complete quarterly product and service updates
-- **Strategic Planning**: Quarterly roadmap and planning insights
-- **Enhanced Content**: Richer multimedia and interactive elements
+### Article 4: AI Fabrics
+**Focus**: Scale-up and scale-out AI networking  
+**Key Topics**: AI fabric architectures, load balancing, partner opportunities
 
 ---
 
 *This current issue page is automatically updated with each newsletter publication. For the latest information, visit the main newsletter at [index.md](index.md).*
 
 **Questions about this issue?** Contact us at [cse-newsletter@arista.com](mailto:cse-newsletter@arista.com)
-
